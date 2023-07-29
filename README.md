@@ -2,6 +2,8 @@
 
 This Repo contains all the configuration files you need to update your RGS-MBU_R from v36 to v37.
 
+This is part 1 to get the custom systems like famicom, sfc, actionmax etc. For Batocera v37 if you manually update.
+
 Guide:
 
 1. Update Batocera via MAIN MENU > UPDATES & DOWNLOADS > UPDATE TYPE > “Stable” and Start Update.
@@ -19,3 +21,14 @@ Guide:
 
 6. go to the root directory and drag and drop the files you unziped. Drag and drop the folders: "usr" and "userdata" to the root.
 
+![image](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/228579a4-85c2-4863-8331-dbe65b44c5f2)
+
+7. If asked to overwrite check "yes to all"
+
+8. When its done, Connect to the terminal and send this command:
+
+batocera-save-overlay
+
+![image](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/deb58a93-e81b-4697-b07a-4b58762f57b0)
+
+Reboot Batocera!
