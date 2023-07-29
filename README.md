@@ -14,7 +14,8 @@ Guide:
 ![image](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/a4454792-7d8f-4486-b3bc-2e680435a02f)
 
 4. Save to Desktop and upzip.
-5. Open WinSCP to your Batocera on the network
+5. Open WinSCP to your Batocera on the network (https://winscp.net/eng/index.php)
+* if your network does not support DNS lookup the IP adres on your router's DHCP table or use a IP scanner. aka "advanced ip scanner" use to IP adres to connect with WinSCP.
 
 
 ![image](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/73bf52c6-e9b8-4f31-9e88-9cb5d8cdd428)
