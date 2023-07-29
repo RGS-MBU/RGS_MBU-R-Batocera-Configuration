@@ -1,8 +1,34 @@
 # RGS_MBU-R-Batocera-Configuration
-This Repo contain the batocera.conf file used in RGS_MBU-R. Here are all the customizations used in my IMG.
 
-The batocera.conf file contains all the custom settings (emulators,game specific settings, system settings, bezel/overlay settings) used in my IMG (RGS_MBU-R v36).
+This Repo contains all the configuration files you need to update your RGS-MBU_R from v36 to v37.
 
-place this file in /userdata/system/batocera.conf and overwrite.
+This is part 1 to get the custom systems like famicom, sfc, actionmax etc. For Batocera v37 if you manually update. You also need the roms and bios files, those are not in this github repo ofc.
 
-Reboot Batocera for changes to take effect.
+Guide:
+
+1. Update Batocera via MAIN MENU > UPDATES & DOWNLOADS > UPDATE TYPE > “Stable” and Start Update.
+2. After the update reboot your system, all the custom systems are gone now eg: famicom, sfc, pspmini etc..
+3. Download this Repo:
+
+
+![image](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/a4454792-7d8f-4486-b3bc-2e680435a02f)
+
+4. Save to Desktop and upzip.
+5. Open WinSCP to your Batocera on the network
+
+
+![image](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/73bf52c6-e9b8-4f31-9e88-9cb5d8cdd428)
+
+6. go to the root directory and drag and drop the files you unziped. Drag and drop the folders: "usr" and "userdata" to the root.
+
+![image](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/228579a4-85c2-4863-8331-dbe65b44c5f2)
+
+7. If asked to overwrite check "yes to all"
+
+8. When its done, Connect to the terminal and send this command:
+
+batocera-save-overlay
+
+![image](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/deb58a93-e81b-4697-b07a-4b58762f57b0)
+
+Reboot Batocera!
