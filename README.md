@@ -10,8 +10,8 @@ Guide:
 2. After the update reboot your system, all the custom systems are gone now eg: famicom, sfc, pspmini etc..
 3. Download this Repo:
 
+![github01](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/2ac9af87-5fb5-4d8f-a585-5250e4d2440d)
 
-![image](https://github.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/assets/134323670/a4454792-7d8f-4486-b3bc-2e680435a02f)
 
 4. Save to Desktop and upzip.
 5. Open WinSCP to your Batocera on the network (https://winscp.net/eng/index.php)
