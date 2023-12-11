@@ -1,8 +1,8 @@
 # RGS_MBU-R-Batocera-Configuration
 
-This Repo contains all the configuration files you need to update your RGS-MBU_R from v36 to v37.
+This Repo contains all the configuration files you need to update your RGS-MBU_R from v37 to v38.
 
-This is part 1 to get the custom systems like famicom, sfc, actionmax etc. For Batocera v37 if you manually update. You also need the roms and bios files, those are not in this github repo ofc.
+This is part 1 to get the custom systems like famicom, sfc, actionmax etc. For Batocera v38 if you manually update. You also need the roms and bios files, those are not in this github repo ofc.
 
 Guide:
 
