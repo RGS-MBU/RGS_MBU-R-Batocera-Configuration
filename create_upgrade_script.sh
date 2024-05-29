@@ -12,10 +12,9 @@ git diff --diff-filter=ACMRTUXB --name-only v39 HEAD | sed 's/.*/"&"/' | xargs t
 
 RMFILES=$(git diff v39 HEAD|grep "rename from"|sed 's/rename from /rm \/userdata\//')
 
-
+cp system/rgs.version ../RGS_MBU-R-Batocera-Configuration/$RELEASE/version.txt
 
 cd ../RGS_MBU-R-Batocera-Configuration
-
 
 #create remove of  old files (deleted of renamed)
 cat rgs_upgrade.template > $UPDATESCRIPT
