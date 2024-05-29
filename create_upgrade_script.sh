@@ -1,8 +1,7 @@
 #!/bin/bash
-set -x
 RELEASE="v39"
 CURRENTCOMMIT="HEAD"
-PACKAGE="/tmp/update$RELEASE.tar.gz"
+PACKAGE="../RGS_MBU-R-Batocera-Configuration/$RELEASE/update.tar.gz"
 UPDATESCRIPT="$RELEASE/rgs_upgrade"
 
 cd ../Batocera

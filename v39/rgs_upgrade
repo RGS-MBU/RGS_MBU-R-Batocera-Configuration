@@ -1,7 +1,7 @@
 #!/bin/bash
 
-read -t 5 -p "A new RGS version is available. Press a key to skip upgrade." RESP
-if [[ $? -gt 30 ]] ; then
+read -t 10 -p "A new RGS version is available. Press a key to skip upgrade." RESP
+if [[ $? -lt 30 ]] ; then
     exit 0
 fi
 
