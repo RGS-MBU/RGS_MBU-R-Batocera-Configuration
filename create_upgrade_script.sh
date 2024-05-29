@@ -19,8 +19,10 @@ cd ../RGS_MBU-R-Batocera-Configuration
 
 #create remove of  old files (deleted of renamed)
 cat rgs_upgrade.template > $UPDATESCRIPT
+echo "echo 'Deleting old files'" >> $UPDATESCRIPT
 echo "$RMFILES" >> $UPDATESCRIPT
-
+echo "echo 'Upgrade finished'" >> $UPDATESCRIPT
+echo "sleep 2" >> $UPDATESCRIPT
 
 
 
