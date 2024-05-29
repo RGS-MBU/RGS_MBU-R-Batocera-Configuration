@@ -5,8 +5,8 @@ if [[ $? -lt 30 ]] ; then
     exit 0
 fi
 
-$ARCHIVE="update.tar.gz"
-$ARCHIVEPATH="/userdata/extraction/$ARCHIVE"
+ARCHIVE="update.tar.gz"
+ARCHIVEPATH="/userdata/extraction/$ARCHIVE"
 
 #read old configuration before "RGS TUNING", for user system changes
 readarray -t OLDCONF < <(grep -B100000 "RGS TUNING" /userdata/system/batocera.conf)
