@@ -8,8 +8,15 @@ fi
 ARCHIVE="update.tar.gz"
 ARCHIVEPATH="/userdata/extractions/$ARCHIVE"
 
-#read old configuration before "RGS TUNING", for user system changes
-readarray -t OLDCONF < <(grep -B100000 "RGS TUNING" /userdata/system/batocera.conf)
+#read user configuration before "RGS TUNING", for user system changes
+BEGINCONF=$(sed -e '/RGS TUNING/,$d' /userdata/system/batocera.conf)
+
+#read end user conf after "END RGS".  (or jupace.emulator for v39 initial release)
+if grep -q "END RGS" /userdata/system/batocera.conf; then
+    ENDCONF=$(sed -e '0,/END RGS/d' /userdata/system/batocera.conf)
+else
+    ENDCONF=$(sed -e '0,/jupace.emulator/d' /userdata/system/batocera.conf)
+fi
 
 #download pack
 echo "Downloading new files..."
@@ -18,22 +25,16 @@ tar -xvzf $ARCHIVEPATH --directory /userdata/
 rm $ARCHIVEPATH
 
 
+#read new conf after 'RGS TUNING' , for games tuning
+RGSTUNING=$(sed -n '/RGS TUNING/,/END RGS/p' /userdata/system/batocera.conf)
+
+
 echo "Update batocera.conf"
 
-#read new conf after 'RGS TUNING' , for games tuning
-readarray -t NEWCONF < <(awk '{if(found) print} /RGS TUNING/{found=1}' /userdata/system/batocera.conf)
 
-
-echo "" > /userdata/system/batocera.conf.new
-
-for ((i=0; i<${#OLDCONF[@]}; i++)); do
-  echo "${OLDCONF[$i]}" >> /userdata/system/batocera.conf.new
-done
-
-for ((i=0; i<${#NEWCONF[@]}; i++)); do
-  echo "${NEWCONF[$i]}" >> /userdata/system/batocera.conf.new
-done
-
+echo "$BEGINCONF" > /userdata/system/batocera.conf.new
+echo "$RGSTUNING" >> /userdata/system/batocera.conf.new
+echo "$ENDCONF" >> /userdata/system/batocera.conf.new
 mv /userdata/system/batocera.conf.new /userdata/system/batocera.conf
 echo 'Deleting old files'
 rm /userdata/system/scripts/border
