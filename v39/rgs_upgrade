@@ -12,7 +12,7 @@ ARCHIVEPATH="/userdata/extractions/$ARCHIVE"
 readarray -t OLDCONF < <(grep -B100000 "RGS TUNING" /userdata/system/batocera.conf)
 
 #download pack
-wget -progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "https://raw.githubusercontent.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/main/v39/update.tar.gz>
+wget -progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "https://raw.githubusercontent.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/main/v39/update.tar.gz"
 tar -xvzf $ARCHIVEPATH --directory /userdata/
 
 #read new conf after 'RGS TUNING' , for games tuning
