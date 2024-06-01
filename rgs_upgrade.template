@@ -1,10 +1,5 @@
 #!/bin/bash
 
-read -t 10 -p "A new RGS version is available. Press a key to skip upgrade." RESP
-if [[ $? -lt 30 ]] ; then
-    exit 0
-fi
-
 ARCHIVE="update.tar.gz"
 ARCHIVEPATH="/userdata/extractions/$ARCHIVE"
 
