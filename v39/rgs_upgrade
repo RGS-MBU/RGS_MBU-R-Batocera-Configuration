@@ -32,6 +32,9 @@ echo "$RGSTUNING" >> /userdata/system/batocera.conf.new
 echo "$ENDCONF" >> /userdata/system/batocera.conf.new
 mv /userdata/system/batocera.conf.new /userdata/system/batocera.conf
 echo 'Deleting old files'
+rm /userdata/system/configs/dolphin-triforce/StateSaves/GVSJ8P.s01
+rm /userdata/system/configs/dolphin-triforce/StateSaves/GGPE01.s01
+rm /userdata/system/configs/dolphin-triforce/StateSaves/GVSJ8P.ini
 rm /userdata/system/scripts/border
 rm /userdata/system/scripts/border.py
 echo 'Upgrade finished'
