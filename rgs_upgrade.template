@@ -15,7 +15,7 @@ fi
 
 #download pack
 echo "Downloading new files..."
-wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "https://raw.githubusercontent.com/RGS-MBU/RGS_MBU-R-Batocera-Configuration/main/v39/update.tar.gz"
+wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "https://rgsretro1986.ds78102.seedhost.eu/update/v39/update.tar.gz"
 tar -xvzf $ARCHIVEPATH --directory /userdata/
 rm $ARCHIVEPATH
 
