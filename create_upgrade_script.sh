@@ -20,9 +20,9 @@ cd ../RGS_MBU-R-Batocera-Configuration
 cat rgs_upgrade.template > $UPDATESCRIPT
 echo "echo 'Deleting old files'" >> $UPDATESCRIPT
 echo "$RMFILES" >> $UPDATESCRIPT
-echo "echo 'Upgrade finished'" >> $UPDATESCRIPT
+echo "echo 'Upgrade finished. System will reboot.'" >> $UPDATESCRIPT
 echo "sleep 2" >> $UPDATESCRIPT
-
+echo "shutdown -r now" >> $UPDATESCRIPT
 
 
 
