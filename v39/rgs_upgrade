@@ -31,6 +31,11 @@ echo "$BEGINCONF" > /userdata/system/batocera.conf.new
 echo "$RGSTUNING" >> /userdata/system/batocera.conf.new
 echo "$ENDCONF" >> /userdata/system/batocera.conf.new
 mv /userdata/system/batocera.conf.new /userdata/system/batocera.conf
+
+echo "Update settings"
+
+sed -i 's/ckau-book-rgs-v2/ckau-book-PixN/' /userdata/system/configs/emulationstation/es_settings.cfg
+sed -i 's/name="SaveGamelistsOnExit" value="false"/name="SaveGamelistsOnExit" value="true"/' /userdata/system/configs/emulationstation/es_settings.cfg
 echo 'Deleting old files'
 rm /userdata/themes/ckau-book-rgs-v2/.gitignore
 rm /userdata/system/configs/dolphin-triforce/StateSaves/GVSJ8P.s01

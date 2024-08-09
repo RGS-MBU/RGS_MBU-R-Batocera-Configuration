@@ -8,8 +8,7 @@ cd ../Batocera
 
 #archive new && changed files
 rm $PACKAGE
-git diff --diff-filter=ACMRTUXB --name-only v39 HEAD | sed 's/.*/"&"/' | xargs tar -czf $PACKAGE
-
+git diff --diff-filter=ACMRTUXB --name-only v39 HEAD | sed 's/^/.\//' |tar -czf $PACKAGE -T -
 RMFILES=$(git diff v39 HEAD|grep "rename from"|sed 's/rename from /rm \/userdata\//')
 
 cp system/rgs.version ../RGS_MBU-R-Batocera-Configuration/$RELEASE/version.txt
