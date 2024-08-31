@@ -36,3 +36,16 @@ echo "Update settings"
 
 sed -i 's/ckau-book-rgs-v2/ckau-book-PixN/' /userdata/system/configs/emulationstation/es_settings.cfg
 sed -i 's/name="SaveGamelistsOnExit" value="false"/name="SaveGamelistsOnExit" value="true"/' /userdata/system/configs/emulationstation/es_settings.cfg
+echo 'Deleting old files'
+
+rm themes/Hypermax-Plus-PixN/Gamelist-text anim.xml
+rm themes/Hypermax-Plus-PixN/_inc/logos/bk.rar
+rm themes/Hypermax-Plus-PixN/_inc/logos/electronika.png
+rm themes/Hypermax-Plus-PixN/_inc/scotty.mp4
+rm "themes/Hypermax-Plus-PixN/_inc/text anim/*"
+rm themes/Hypermax-Plus-PixN/_template/4815203235791361221411321768176177154196199443.ico
+rm themes/Hypermax-Plus-PixN/default/desktop.ini
+rm themes/Hypermax-Plus-PixN/konami/desktop.ini
+echo 'Upgrade finished. Emulationstation will be reloaded.'
+sleep 2
+killall -9 emulationstation

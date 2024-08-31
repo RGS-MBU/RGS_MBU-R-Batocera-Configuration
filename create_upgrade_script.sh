@@ -1,5 +1,5 @@
 #!/bin/bash
-RELEASE="v39"
+RELEASE="v40"
 CURRENTCOMMIT="HEAD"
 PACKAGE="../RGS_MBU-R-Batocera-Configuration/$RELEASE/update.tar.gz"
 UPDATESCRIPT="$RELEASE/rgs_upgrade"
@@ -8,8 +8,10 @@ cd ../Batocera
 
 #archive new && changed files
 rm $PACKAGE
-git diff --diff-filter=ACMRTUXB --name-only v39 HEAD | sed 's/^/.\//' |tar -czf $PACKAGE -T -
-RMFILES=$(git diff v39 HEAD|grep "rename from"|sed 's/rename from /rm \/userdata\//')
+git diff --diff-filter=ACMRTUXB --name-only $RELEASE HEAD | sed 's/^/.\//' |tar -czf $PACKAGE -T -
+RENAMEDFILES=$(git diff $RELEASE HEAD|grep "rename from"|sed 's/rename from /rm \/userdata\//')
+RMFILES=$(git diff $RELEASE HEAD --diff-filter=D --summary|sed 's/delete mode 100644/rm/')
+
 
 cp system/rgs.version ../RGS_MBU-R-Batocera-Configuration/$RELEASE/version.txt
 
@@ -18,6 +20,7 @@ cd ../RGS_MBU-R-Batocera-Configuration
 #create remove of  old files (deleted of renamed)
 cat rgs_upgrade.template > $UPDATESCRIPT
 echo "echo 'Deleting old files'" >> $UPDATESCRIPT
+echo "$RENAMEDFILES" >> $UPDATESCRIPT
 echo "$RMFILES" >> $UPDATESCRIPT
 echo "echo 'Upgrade finished. Emulationstation will be reloaded.'" >> $UPDATESCRIPT
 echo "sleep 2" >> $UPDATESCRIPT
