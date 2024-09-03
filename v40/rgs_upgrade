@@ -43,6 +43,7 @@ rm themes/Hypermax-Plus-PixN/_inc/logos/bk.rar
 rm themes/Hypermax-Plus-PixN/_inc/logos/electronika.png
 rm themes/Hypermax-Plus-PixN/_inc/scotty.mp4
 rm "themes/Hypermax-Plus-PixN/_inc/text anim/*"
+rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/desktop.ini
 rm themes/Hypermax-Plus-PixN/_template/4815203235791361221411321768176177154196199443.ico
 rm themes/Hypermax-Plus-PixN/default/desktop.ini
 rm themes/Hypermax-Plus-PixN/konami/desktop.ini
