@@ -27,6 +27,8 @@ rm -rf /userdata/themes
 echo "uncompress archive..."
 
 tar -xvzf $ARCHIVEPATH --directory /userdata/
+mv /userdata/Batocera/* /userdata/
+rm -rf /userdata/Batocera
 rm $ARCHIVEPATH
 
 echo 'Upgrade finished. reboot.'
