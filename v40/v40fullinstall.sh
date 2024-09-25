@@ -35,4 +35,5 @@ rm $ARCHIVEPATH
 
 echo 'Upgrade finished. reboot.'
 sleep 2
+killall -9 emulationstation
 shutdown -r now
