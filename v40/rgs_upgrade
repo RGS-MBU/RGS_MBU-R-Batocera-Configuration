@@ -38,19 +38,21 @@ sed -i 's/ckau-book-rgs-v2/ckau-book-PixN/' /userdata/system/configs/emulationst
 sed -i 's/name="SaveGamelistsOnExit" value="false"/name="SaveGamelistsOnExit" value="true"/' /userdata/system/configs/emulationstation/es_settings.cfg
 echo 'Deleting old files'
 
+rm -rf system/evmapy
+rm themes/Carbon-PixN/art/logos/atari.svg
 rm themes/Hypermax-Plus-PixN/Gamelist-text anim.xml
 rm themes/Hypermax-Plus-PixN/_inc/logos/CloneHero.jpg
 rm themes/Hypermax-Plus-PixN/_inc/logos/bk.rar
 rm themes/Hypermax-Plus-PixN/_inc/logos/electronika.png
-rm themes/Hypermax-Plus-PixN/_inc/music/Beach (8-Bit Remix) - New Super Mario Bros.ogg
-rm themes/Hypermax-Plus-PixN/_inc/music/Fracktail Battle (8-Bit Cover) - Super Paper Mario.ogg
-rm themes/Hypermax-Plus-PixN/_inc/music/Francis Battle 8Bit Remix  Super Paper Mario BT.ogg
-rm themes/Hypermax-Plus-PixN/_inc/music/Mars Attacks Main Theme.mp3
-rm themes/Hypermax-Plus-PixN/_inc/music/Mars Attacks Main Theme.wav
-rm themes/Hypermax-Plus-PixN/_inc/music/New Super Mario Bros.ogg
-rm themes/Hypermax-Plus-PixN/_inc/music/Red Streamer Battle (8-Bit Remix) - Paper Mario_ The Origami King.ogg
-rm themes/Hypermax-Plus-PixN/_inc/music/Vellumental Battle 8Bit Remix  Paper Mario The Origami King.ogg
-rm themes/Hypermax-Plus-PixN/_inc/text anim/*
+rm "themes/Hypermax-Plus-PixN/_inc/music/Beach (8-Bit Remix) - New Super Mario Bros.ogg"
+rm "themes/Hypermax-Plus-PixN/_inc/music/Fracktail Battle (8-Bit Cover) - Super Paper Mario.ogg"
+rm "themes/Hypermax-Plus-PixN/_inc/music/Francis Battle 8Bit Remix  Super Paper Mario BT.ogg"
+rm "themes/Hypermax-Plus-PixN/_inc/music/Mars Attacks Main Theme.mp3"
+rm "themes/Hypermax-Plus-PixN/_inc/music/Mars Attacks Main Theme.wav"
+rm "themes/Hypermax-Plus-PixN/_inc/music/New Super Mario Bros.ogg"
+rm "themes/Hypermax-Plus-PixN/_inc/music/Red Streamer Battle (8-Bit Remix) - Paper Mario_ The Origami King.ogg"
+rm "themes/Hypermax-Plus-PixN/_inc/music/Vellumental Battle 8Bit Remix  Paper Mario The Origami King.ogg"
+rm -rf themes/Hypermax-Plus-PixN/_inc/text anim/*
 rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/D0IIRGVUcAEcS5K.png
 rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/NINTCHDBPICT000536074229-e1572807808559.webp
 rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/desktop.ini
