@@ -65,31 +65,35 @@ if ! grep -q "genh.ungroup" /userdata/system/configs/emulationstation/es_setting
     sed -i '$i'"$(echo "\\\t<bool name=\"genh.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
 fi
 
+if ! grep -q "2players,4players" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '/CollectionSystemsAuto/c\\\\t<string name="CollectionSystemsAuto" value="favorites,lightgun,recent,wheel" />' /userdata/system/configs/emulationstation/es_settings.cfg
+    sed -i '/CollectionSystemsCustom/c\\\\t<string name="CollectionSystemsCustom" value="3players,4players,arcade-classics,arcade-killer,beatemup,fighting,platform,puzzle,run-and-gun,shumps-horizontal,shumps-vertical,sports" />' /userdata/system/configs/emulationstation/es_settings.cfg
+fi
 echo 'Deleting old files'
 
-rm -rf system/evmapy
-rm themes/Carbon-PixN/art/logos/atari.svg
-rm themes/Hypermax-Plus-PixN/Gamelist-text anim.xml
-rm themes/Hypermax-Plus-PixN/_inc/logos/CloneHero.jpg
-rm themes/Hypermax-Plus-PixN/_inc/logos/bk.rar
-rm themes/Hypermax-Plus-PixN/_inc/logos/electronika.png
-rm "themes/Hypermax-Plus-PixN/_inc/music/Beach (8-Bit Remix) - New Super Mario Bros.ogg"
-rm "themes/Hypermax-Plus-PixN/_inc/music/Fracktail Battle (8-Bit Cover) - Super Paper Mario.ogg"
-rm "themes/Hypermax-Plus-PixN/_inc/music/Francis Battle 8Bit Remix  Super Paper Mario BT.ogg"
-rm "themes/Hypermax-Plus-PixN/_inc/music/Mars Attacks Main Theme.mp3"
-rm "themes/Hypermax-Plus-PixN/_inc/music/Mars Attacks Main Theme.wav"
-rm "themes/Hypermax-Plus-PixN/_inc/music/New Super Mario Bros.ogg"
-rm "themes/Hypermax-Plus-PixN/_inc/music/Red Streamer Battle (8-Bit Remix) - Paper Mario_ The Origami King.ogg"
-rm "themes/Hypermax-Plus-PixN/_inc/music/Vellumental Battle 8Bit Remix  Paper Mario The Origami King.ogg"
-rm -rf themes/Hypermax-Plus-PixN/_inc/text anim/*
-rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/D0IIRGVUcAEcS5K.png
-rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/NINTCHDBPICT000536074229-e1572807808559.webp
-rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/desktop.ini
-rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/neshd.png
-rm themes/Hypermax-Plus-PixN/_template/4815203235791361221411321768176177154196199443.ico
-rm themes/Hypermax-Plus-PixN/capcom/desktop.ini
-rm themes/Hypermax-Plus-PixN/default/desktop.ini
-rm themes/Hypermax-Plus-PixN/konami/desktop.ini
+ rm -rf system/evmapy
+ rm themes/Carbon-PixN/art/logos/atari.svg
+ rm themes/Hypermax-Plus-PixN/Gamelist-text anim.xml
+ rm themes/Hypermax-Plus-PixN/_inc/logos/CloneHero.jpg
+ rm themes/Hypermax-Plus-PixN/_inc/logos/bk.rar
+ rm themes/Hypermax-Plus-PixN/_inc/logos/electronika.png
+ rm themes/Hypermax-Plus-PixN/_inc/music/Beach (8-Bit Remix) - New Super Mario Bros.ogg
+ rm themes/Hypermax-Plus-PixN/_inc/music/Fracktail Battle (8-Bit Cover) - Super Paper Mario.ogg
+ rm themes/Hypermax-Plus-PixN/_inc/music/Francis Battle 8Bit Remix  Super Paper Mario BT.ogg
+ rm themes/Hypermax-Plus-PixN/_inc/music/Mars Attacks Main Theme.mp3
+ rm themes/Hypermax-Plus-PixN/_inc/music/Mars Attacks Main Theme.wav
+ rm themes/Hypermax-Plus-PixN/_inc/music/New Super Mario Bros.ogg
+ rm themes/Hypermax-Plus-PixN/_inc/music/Red Streamer Battle (8-Bit Remix) - Paper Mario_ The Origami King.ogg
+ rm themes/Hypermax-Plus-PixN/_inc/music/Vellumental Battle 8Bit Remix  Paper Mario The Origami King.ogg
+ rm -rf themes/Hypermax-Plus-PixN/_inc/text anim
+ rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/D0IIRGVUcAEcS5K.png
+ rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/NINTCHDBPICT000536074229-e1572807808559.webp
+ rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/desktop.ini
+ rm themes/Hypermax-Plus-PixN/_inc/wallpaper1/neshd.png
+ rm themes/Hypermax-Plus-PixN/_template/4815203235791361221411321768176177154196199443.ico
+ rm themes/Hypermax-Plus-PixN/capcom/desktop.ini
+ rm themes/Hypermax-Plus-PixN/default/desktop.ini
+ rm themes/Hypermax-Plus-PixN/konami/desktop.ini
 echo 'Upgrade finished. Emulationstation will be reloaded.'
 sleep 2
 killall -9 emulationstation
