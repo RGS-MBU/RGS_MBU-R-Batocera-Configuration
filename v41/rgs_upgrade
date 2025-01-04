@@ -1,5 +1,17 @@
 #!/bin/bash
 
+if [ -f "/userdata/system/rgs.version" ]; then
+    CURRENTRGSVERSION=$(cat /userdata/system/rgs.version)
+else
+    CURRENTRGSVERSION="0"
+fi
+
+if [[ "$CURRENTRGSVERSION" =~ ^40\.(\d+) ]]; then
+    echo "version: 40"
+else
+    echo "version: 41"
+fi
+
 ARCHIVE="v40tov41update.tar.gz"
 ARCHIVEPATH="/userdata/extractions/$ARCHIVE"
 
@@ -13,6 +25,8 @@ else
     ENDCONF=$(sed -e '0,/jupace.emulator/d' /userdata/system/batocera.conf)
 fi
 
+
+exit 1
 #download pack
 echo "Downloading new files..."
 wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "http://rgsretro1986.ds78102.seedhost.eu/update/v41/v40tov41update.tar.gz"
