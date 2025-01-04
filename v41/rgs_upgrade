@@ -30,10 +30,9 @@ else
 fi
 
 
-exit 1
 #download pack
 echo "Downloading new files..."
-wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "http://rgsretro1986.ds78102.seedhost.eu/update/v41/v40tov41update.tar.gz"
+wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "http://rgsretro1986.ds78102.seedhost.eu/update/v41/$ARCHIVE"
 
 
 echo 'Deleting old files'
