@@ -8,7 +8,7 @@ fi
 
 if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
     echo "version: 40"
-    ARCHIVE="v40to41update.tar.gz"
+    ARCHIVE="v40tov41update.tar.gz"
 elif [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     echo "version: 41"
     ARCHIVE="update.tar.gz"
