@@ -1,21 +1,5 @@
-#!/bin/bash
-
-ARCHIVE="update.tar.gz"
-ARCHIVEPATH="/userdata/extractions/$ARCHIVE"
-
-#read user configuration before "RGS TUNING", for user system changes
-BEGINCONF=$(sed -e '/RGS TUNING/,$d' /userdata/system/batocera.conf)
-
-#read end user conf after "END RGS".  (or jupace.emulator for v39 initial release)
-if grep -q "END RGS" /userdata/system/batocera.conf; then
-    ENDCONF=$(sed -e '0,/END RGS/d' /userdata/system/batocera.conf)
-else
-    ENDCONF=$(sed -e '0,/jupace.emulator/d' /userdata/system/batocera.conf)
 fi
 
-#download pack
-echo "Downloading new files..."
-wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "https://rgsretro1986.ds78102.seedhost.eu/update/v40/update.tar.gz"
 tar -xvzf $ARCHIVEPATH --directory /userdata/
 rm $ARCHIVEPATH
 

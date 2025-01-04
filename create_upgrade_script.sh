@@ -1,5 +1,5 @@
 #!/bin/bash
-RELEASE="v40"
+RELEASE="v41"
 CURRENTCOMMIT="HEAD"
 PACKAGE="../RGS_MBU-R-Batocera-Configuration/$RELEASE/update.tar.gz"
 UPDATESCRIPT="$RELEASE/rgs_upgrade"
@@ -18,10 +18,11 @@ cp system/rgs.version ../RGS_MBU-R-Batocera-Configuration/$RELEASE/version.txt
 cd ../RGS_MBU-R-Batocera-Configuration
 
 #create remove of  old files (deleted of renamed)
-cat rgs_upgrade.template > $UPDATESCRIPT
-echo "echo 'Deleting old files'" >> $UPDATESCRIPT
+cat rgs_upgrade_part1.template > $UPDATESCRIPT
 echo "$RENAMEDFILES" >> $UPDATESCRIPT
 echo "$RMFILES" >> $UPDATESCRIPT
+cat rgs_upgrade_part2.template >> $UPDATESCRIPT
+
 echo "echo 'Upgrade finished. Emulationstation will be reloaded.'" >> $UPDATESCRIPT
 echo "sleep 2" >> $UPDATESCRIPT
 echo "killall -9 emulationstation" >> $UPDATESCRIPT
