@@ -23,9 +23,4 @@ echo "$RENAMEDFILES" >> $UPDATESCRIPT
 echo "$RMFILES" >> $UPDATESCRIPT
 cat rgs_upgrade_part2.template >> $UPDATESCRIPT
 
-echo "echo 'Upgrade finished. Emulationstation will be reloaded.'" >> $UPDATESCRIPT
-echo "sleep 2" >> $UPDATESCRIPT
-echo "killall -9 emulationstation" >> $UPDATESCRIPT
-
-
 
