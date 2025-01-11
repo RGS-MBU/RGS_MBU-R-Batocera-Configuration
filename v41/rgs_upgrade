@@ -39,6 +39,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
     echo 'Deleting old files from v40'
 
     rm -rf /userdata/system/evmapy
+    rm -rf /userdata/system/switch/*
     rm -rf /userdata/bios/switch/*
     rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered
     rm -rf /userdata/system/configs/yuzu/nand/system/Contents/registered
