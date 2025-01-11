@@ -40,6 +40,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
 
     rm -rf /userdata/system/evmapy
     rm -rf /userdata/bios/switch/*
+    rm -rf /userdata/system/switch/*
     rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered
     rm -rf /userdata/system/configs/yuzu/nand/system/Contents/registered
     rm -rf /userdata/system/wine/*
@@ -86,4 +87,17 @@ if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
     rm '/userdata/themes/Hypermax-Plus-PixN/konami/desktop.ini'
 else
     echo 'Deleting old files'
+
+    rm -rf /userdata/system/switch/extra
+    rm -rf /userdata/system/switch/logs
+    rm /userdata/system/switch/Ryujinx-Avalonia.AppImage
+    rm /userdata/system/switch/yuzuEA.AppImage
+    rm /userdata/system/switch/CONFIG.txt
+    rm /userdata/system/switch/Ryujinx-LDN.AppImage
+    rm /userdata/system/switch/Ryujinx-Avalonia.AppImage
+    rm /userdata/system/switch/configgen/GeneratorImporter.py
+    rm /userdata/system/switch/configgen/switchlauncher2.py
+    rm /userdata/system/switch/configgen/switchlauncher.py
+    rm /userdata/system/switch/switch/configgen/generators/Generator.py
+
 
