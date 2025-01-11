@@ -99,6 +99,7 @@ else
     rm /userdata/system/switch/configgen/switchlauncher2.py
     rm /userdata/system/switch/configgen/switchlauncher.py
     rm /userdata/system/switch/switch/configgen/generators/Generator.py
+
 fi
 
 tar -xvzf $ARCHIVEPATH --directory /userdata/
