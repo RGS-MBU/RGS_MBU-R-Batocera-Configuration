@@ -13,8 +13,6 @@ chmod +x /usr/bin/rclone
 echo "Downloading new files..."
 rclone sync "PixN-Updates:/v41/$ARCHIVE" $ARCHIVEPATH --progress
 
-exit 1
-
 echo 'Deleting old directories'
 sleep 5
 
