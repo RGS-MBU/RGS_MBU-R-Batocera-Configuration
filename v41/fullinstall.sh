@@ -7,7 +7,7 @@ ARCHIVEPATH="/userdata/$ARCHIVE"
 mkdir -p /userdata/system/.config/rclone/
 wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /usr/bin/rclone https://pixeldrain.com/api/filesystem/YD1k3dcE/rclone
 wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /userdata/system/.config/rclone/rclone.conf https://pixeldrain.com/api/filesystem/YD1k3dcE/rclone.conf
-
+chmod +x /usr/bin/rclone
 
 #download pack
 echo "Downloading new files..."
