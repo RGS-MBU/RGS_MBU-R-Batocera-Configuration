@@ -4,7 +4,9 @@ ARCHIVE="fullinstall.tar.gz"
 ARCHIVEPATH="/userdata/$ARCHIVE"
 
 #download rclone
+mkdir -p /userdata/system/.config/rclone/
 wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /usr/bin/rclone https://pixeldrain.com/api/filesystem/me/Updates/rclone
+wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /userdata/system/.config/rclone/rclone.conf https://pixeldrain.com/api/filesystem/me/Updates/rclone.conf
 
 
 #download pack
