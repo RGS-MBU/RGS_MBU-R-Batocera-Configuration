@@ -5,8 +5,8 @@ ARCHIVEPATH="/userdata/$ARCHIVE"
 
 #download rclone
 mkdir -p /userdata/system/.config/rclone/
-wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /usr/bin/rclone https://pixeldrain.com/api/filesystem/me/Updates/rclone
-wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /userdata/system/.config/rclone/rclone.conf https://pixeldrain.com/api/filesystem/me/Updates/rclone.conf
+wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /usr/bin/rclone https://pixeldrain.com/api/filesystem/YD1k3dcE/rclone
+wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /userdata/system/.config/rclone/rclone.conf https://pixeldrain.com/api/filesystem/YD1k3dcE/rclone.conf
 
 
 #download pack
