@@ -19,7 +19,7 @@ echo "uncompress archive..."
 sleep 5
 
 
-if tar -xvzf $ARCHIVEPATH --directory /userdata/
+if tar -xvf $ARCHIVEPATH --directory /userdata/
 then
     echo 'uncompressing archive ok'
 else
