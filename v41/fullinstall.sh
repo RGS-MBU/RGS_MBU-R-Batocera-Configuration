@@ -13,7 +13,9 @@ ARCHIVEPATH="/userdata/$ARCHIVE"
 #download pack
 echo "Downloading new files..."
 #rclone sync "PixN-Updates:/v41/$ARCHIVE" $ARCHIVEPATH --progress
-wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH https://pixeldrain.com/api/filesystem/YD1k3dcE/v41/fullinstall.tar.gz
+if [ ! -f $ARCHIVEPATH ]; then
+    wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH https://pixeldrain.com/api/filesystem/YD1k3dcE/v41/fullinstall.tar.gz
+fi
 
 echo "uncompress archive..."
 sleep 5
@@ -53,6 +55,9 @@ mv /userdata/Batocera/roms/rgs /userdata/roms/
 rm -rf /userdata/Batocera/roms
 mv /userdata/Batocera/* /userdata/
 rm -rf /userdata/Batocera
+
+exit
+
 rm $ARCHIVEPATH
 
 echo 'Upgrade finished. reboot.'
