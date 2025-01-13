@@ -56,8 +56,6 @@ rm -rf /userdata/Batocera/roms
 mv /userdata/Batocera/* /userdata/
 rm -rf /userdata/Batocera
 
-exit
-
 rm $ARCHIVEPATH
 
 echo 'Upgrade finished. reboot.'
