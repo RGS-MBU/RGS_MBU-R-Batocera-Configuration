@@ -100,8 +100,6 @@ else
     rm /userdata/system/switch/configgen/switchlauncher.py
     rm /userdata/system/switch/switch/configgen/generators/Generator.py
 
-
-
 fi
 
 tar -xvzf $ARCHIVEPATH --directory /userdata/
@@ -117,7 +115,7 @@ echo "Update batocera.conf"
 
 echo "$BEGINCONF" > /userdata/system/batocera.conf.new
 
-sed -i '/system.services/d' /userdata/system/batocera.conf.new
+#sed -i '/system.services/d' /userdata/system/batocera.conf.new
 sed -i '/windows.dxvk/d' /userdata/system/batocera.conf.new
 sed -i '/windows.fsync/d' /userdata/system/batocera.conf.new
 sed -i '/windows.esync/d' /userdata/system/batocera.conf.new

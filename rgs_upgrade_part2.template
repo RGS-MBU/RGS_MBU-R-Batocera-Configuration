@@ -13,7 +13,7 @@ echo "Update batocera.conf"
 
 echo "$BEGINCONF" > /userdata/system/batocera.conf.new
 
-sed -i '/system.services/d' /userdata/system/batocera.conf.new
+#sed -i '/system.services/d' /userdata/system/batocera.conf.new
 sed -i '/windows.dxvk/d' /userdata/system/batocera.conf.new
 sed -i '/windows.fsync/d' /userdata/system/batocera.conf.new
 sed -i '/windows.esync/d' /userdata/system/batocera.conf.new
