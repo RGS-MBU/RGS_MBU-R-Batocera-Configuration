@@ -100,6 +100,7 @@ else
     rm /userdata/system/switch/configgen/switchlauncher.py
     rm /userdata/system/switch/switch/configgen/generators/Generator.py
 
+    rm system/configs/emulationstation/es_systems_atarijaguarcd.cfg
 fi
 
 tar -xvzf $ARCHIVEPATH --directory /userdata/
