@@ -181,6 +181,6 @@ if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
     reboot
 else
     echo 'Upgrade finished. Emulationstation will be reloaded.'
-    sleep 5
+    sleep 60
     killall -9 emulationstation
 fi
