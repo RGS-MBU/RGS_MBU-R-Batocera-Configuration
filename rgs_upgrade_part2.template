@@ -5,7 +5,8 @@ rm $ARCHIVEPATH
 
 #workaround lock for v41, to remove in v42
 if [[ -f "/userdata/roms/rgs/rgs_upgrade.sh.new" ]]; then
-    mv /userdata/roms/rgs/rgs_upgrade.sh.new /userdata/roms/rgs/rgs_upgrade.sh
+    cp /userdata/roms/rgs/rgs_upgrade.sh.new /userdata/roms/rgs/rgs_upgrade.sh
+    rm /userdata/roms/rgs/rgs_upgrade.sh.new
 fi
 
 #read new conf after 'RGS TUNING' , for games tuning

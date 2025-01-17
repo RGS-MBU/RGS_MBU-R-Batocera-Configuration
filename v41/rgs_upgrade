@@ -99,7 +99,6 @@ else
     rm /userdata/system/switch/configgen/switchlauncher2.py
     rm /userdata/system/switch/configgen/switchlauncher.py
     rm /userdata/system/switch/switch/configgen/generators/Generator.py
-
     rm system/configs/emulationstation/es_systems_atarijaguarcd.cfg
 fi
 
@@ -108,9 +107,8 @@ rm $ARCHIVEPATH
 
 #workaround lock for v41, to remove in v42
 if [[ -f "/userdata/roms/rgs/rgs_upgrade.sh.new" ]]; then
-    echo "move /userdata/roms/rgs/rgs_upgrade.sh.new to /userdata/roms/rgs/rgs_upgrade.sh"
-    mv /userdata/roms/rgs/rgs_upgrade.sh.new /userdata/roms/rgs/rgs_upgrade.sh
-    sleep 10
+    cp /userdata/roms/rgs/rgs_upgrade.sh.new /userdata/roms/rgs/rgs_upgrade.sh
+    rm /userdata/roms/rgs/rgs_upgrade.sh.new
 fi
 
 #read new conf after 'RGS TUNING' , for games tuning
