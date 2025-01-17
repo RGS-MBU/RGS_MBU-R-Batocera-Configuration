@@ -100,19 +100,7 @@ else
     rm /userdata/system/switch/configgen/switchlauncher.py
     rm /userdata/system/switch/switch/configgen/generators/Generator.py
 
-
-
- rm system/configs/Ryujinx/BeforeRyu.json
- rm system/configs/Ryujinx/Config.json
- rm system/configs/emulationstation/es_systems_atarijaguarcd.cfg
- rm system/configs/yuzu/before-qt-config.ini
- rm system/configs/yuzu/qt-config.bak
- rm system/configs/yuzu/qt-config.ini
- rm system/configs/yuzu/qt-config.ini.bak
- rm system/configs/yuzu/qt-config.ini2
- rm system/configs/yuzu/window_state.ini
- rm system/switch/configgen/generators/nohup.out
- rm system/switch/configgen/nohup.out
+    rm system/configs/emulationstation/es_systems_atarijaguarcd.cfg
 fi
 
 tar -xvzf $ARCHIVEPATH --directory /userdata/
