@@ -3,17 +3,17 @@
 echo "Upgrading themes....."
 
 if [ -d "/userdata/themes/ckau-book-PixN" ]; then
-    echo "upgrade ckau-book-PixN theme
+    echo "upgrade ckau-book-PixN theme"
     rclone sync PixN-Themes:/ckau-book-PixN /userdata/themes/ckau-book-PixN --progress
 fi
 
 if [ -d "/userdata/themes/Hypermax-Plus-PixN" ]; then
-    echo "upgrade Hypermax-Plus-PixN theme
+    echo "upgrade Hypermax-Plus-PixN theme"
     rclone sync PixN-Themes:/Hypermax-Plus-PixN /userdata/themes/Hypermax-Plus-PixN --progress
 fi
 
 if [ -d "/userdata/themes/Carbon-PixN" ]; then
-    echo "upgrade Carbon-PixN theme
+    echo "upgrade Carbon-PixN theme"
     rclone sync PixN-Themes:/Carbon-PixN /userdata/themes/Carbon-PixN --progress
 fi
 
