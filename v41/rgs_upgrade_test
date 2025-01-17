@@ -11,7 +11,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
     ARCHIVE="v40tov41update.tar.gz"
 elif [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     echo "version: 41"
-    ARCHIVE="update.tar.gz"
+    ARCHIVE="update2.tar.gz"
 else
    echo "wrong version"
    exit 1
