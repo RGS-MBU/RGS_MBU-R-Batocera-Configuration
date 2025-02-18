@@ -99,5 +99,9 @@ else
     rm /userdata/system/switch/configgen/switchlauncher2.py
     rm /userdata/system/switch/configgen/switchlauncher.py
     rm /userdata/system/switch/switch/configgen/generators/Generator.py
+    rm /usr/share/applications/Ryujinx.desktop
+    rm /usr/share/applications/yuzu.desktop
+    rm /userdata/system/switch/Ryujinx.desktop
+    rm /userdata/system/switch/yuzu.desktop
 
 
