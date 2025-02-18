@@ -101,7 +101,10 @@ else
     rm /userdata/system/switch/switch/configgen/generators/Generator.py
     rm /userdata/system/configs/emulationstation/es_systems_atarijaguarcd.cfg
     rm /userdata/system/configs/evmapy/model3.keys
-
+    rm /usr/share/applications/Ryujinx.desktop
+    rm /usr/share/applications/yuzu.desktop
+    rm /userdata/system/switch/Ryujinx.desktop
+    rm /userdata/system/switch/yuzu.desktop
 fi
 
 tar -xvzf $ARCHIVEPATH --directory /userdata/
