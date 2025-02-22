@@ -15,6 +15,7 @@ RGSTUNING=$(sed -n '/RGS TUNING/,/END RGS/p' /userdata/system/batocera.conf)
 
 echo "Update batocera.conf"
 
+/usr/bin/batocera-services enable rgs_config
 
 echo "$BEGINCONF" > /userdata/system/batocera.conf.new
 
