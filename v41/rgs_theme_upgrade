@@ -2,6 +2,9 @@
 
 echo "Upgrading themes....."
 
+
+curl --silent --output /dev/null https://pixeldrain.com/api/filesystem/pXCC5M4U
+
 if [ -d "/userdata/themes/ckau-book-PixN" ]; then
     echo "upgrade ckau-book-PixN theme"
     /userdata/system/rgsfix/rclone sync PixN-Themes:/ckau-book-PixN /userdata/themes/ckau-book-PixN --progress
