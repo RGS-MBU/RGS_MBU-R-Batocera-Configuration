@@ -124,8 +124,6 @@ RGSTUNING=$(sed -n '/RGS TUNING/,/END RGS/p' /userdata/system/batocera.conf)
 
 echo "Update batocera.conf"
 
-/usr/bin/batocera-services enable rgs_config
-
 echo "$BEGINCONF" > /userdata/system/batocera.conf.new
 
 #sed -i '/system.services/d' /userdata/system/batocera.conf.new
@@ -136,6 +134,8 @@ sed -i '/windows.esync/d' /userdata/system/batocera.conf.new
 echo "$RGSTUNING" >> /userdata/system/batocera.conf.new
 echo "$ENDCONF" >> /userdata/system/batocera.conf.new
 mv /userdata/system/batocera.conf.new /userdata/system/batocera.conf
+
+/usr/bin/batocera-services enable rgs_config
 
 echo "Update settings"
 
