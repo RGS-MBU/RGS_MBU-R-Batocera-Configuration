@@ -105,6 +105,8 @@ else
     rm /usr/share/applications/yuzu.desktop
     rm /userdata/system/switch/Ryujinx.desktop
     rm /userdata/system/switch/yuzu.desktop
+    rm /userdata/system/configs/emulationstation/es_systems_gc-jp.cfg
+    rm /userdata/system/configs/emulationstation/es_systems_gch.cfg
 fi
 
 tar -xvzf $ARCHIVEPATH --directory /userdata/
