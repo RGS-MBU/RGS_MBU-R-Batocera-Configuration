@@ -66,6 +66,14 @@ if ! grep -q "2players,4players" /userdata/system/configs/emulationstation/es_se
     sed -i '/CollectionSystemsCustom/c\\\\t<string name="CollectionSystemsCustom" value="3players,4players,arcade-classics,arcade-killer,beatemup,fighting,platform,puzzle,run-and-gun,shumps-horizontal,shumps-vertical,sports" />' /userdata/system/configs/emulationstation/es_settings.cfg
 fi
 
+if ! grep -q "gamecube-jp.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"gamecube-jp.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "gamecubeh.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"gamecubeh.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
 if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
     echo 'RGS Upgrade from v40 to v41 finished. The system will reboot.'
     sleep 5
