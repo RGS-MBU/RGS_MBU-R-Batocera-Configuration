@@ -14,7 +14,7 @@ ARCHIVEPATH="/userdata/$ARCHIVE"
 echo "Downloading new files..."
 #rclone sync "PixN-Updates:/v41/$ARCHIVE" $ARCHIVEPATH --progress
 if [ ! -f $ARCHIVEPATH ]; then
-    wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH https://pixeldrain.com/api/filesystem/YD1k3dcE/v41/fullinstall.tar.gz
+    wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH http://rgsretro1986.ds78102.seedhost.eu/update/v41/fullinstall.tar.gz
 fi
 
 echo "uncompress archive..."
