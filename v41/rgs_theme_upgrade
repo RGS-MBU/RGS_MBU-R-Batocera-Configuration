@@ -20,11 +20,6 @@ if [ -d "/userdata/themes/Carbon-PixN" ]; then
     /userdata/system/rgsfix/rclone sync PixN-Themes-New:/update/Themes/Carbon-PixN /userdata/themes/Carbon-PixN --progress
 fi
 
-if [ -d "/userdata/themes/Hypermax-Lite-PixN" ]; then
-    echo "upgrade Hypermax-Lite-PixN theme"
-    /userdata/system/rgsfix/rclone sync PixN-Themes-New:/update/Themes/Hypermax-Lite-PixN /userdata/themes/Hypermax-Lite-PixN --progress
-fi
-
 if [ -d "/userdata/themes/ckau-book" ]; then
     echo "upgrade ckau-book theme"
     /userdata/system/rgsfix/rclone sync PixN-Themes-New:/update/Themes/ckau-book /userdata/themes/ckau-book --progress
