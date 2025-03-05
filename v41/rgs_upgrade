@@ -107,6 +107,8 @@ else
     rm /userdata/system/switch/yuzu.desktop
     rm /userdata/system/configs/emulationstation/es_systems_gc-jp.cfg
     rm /userdata/system/configs/emulationstation/es_systems_gch.cfg
+    rm system/configs/emulationstation/es_systems_lindbergh.cfg
+
 fi
 
 tar -xvzf $ARCHIVEPATH --directory /userdata/
