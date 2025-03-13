@@ -61,6 +61,10 @@ if ! grep -q "genh.ungroup" /userdata/system/configs/emulationstation/es_setting
     sed -i '$i'"$(echo "\\\t<bool name=\"genh.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
 fi
 
+if ! grep -q "clonehero.FolderViewMode" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"clonehero.FolderViewMode\" value=\"never\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
 if ! grep -q "2players,4players" /userdata/system/configs/emulationstation/es_settings.cfg; then
     sed -i '/CollectionSystemsAuto/c\\\\t<string name="CollectionSystemsAuto" value="favorites,lightgun,recent,wheel" />' /userdata/system/configs/emulationstation/es_settings.cfg
     sed -i '/CollectionSystemsCustom/c\\\\t<string name="CollectionSystemsCustom" value="3players,4players,arcade-classics,arcade-killer,beatemup,fighting,platform,puzzle,run-and-gun,shumps-horizontal,shumps-vertical,sports" />' /userdata/system/configs/emulationstation/es_settings.cfg
