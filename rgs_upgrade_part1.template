@@ -103,5 +103,10 @@ else
     rm /usr/share/applications/yuzu.desktop
     rm /userdata/system/switch/Ryujinx.desktop
     rm /userdata/system/switch/yuzu.desktop
+    rm /usr/share/applications/yuyu-config.desktop
+    rm /usr/share/applications/yuyuEA-config.desktop
+    rm /usr/share/applications/ryujinx-Avalonia-config.desktop
+    rm /usr/share/applications/ryujinx-config.desktop
+    rm /usr/share/applications/ryujinx-LDN-config.desktop
 
 
