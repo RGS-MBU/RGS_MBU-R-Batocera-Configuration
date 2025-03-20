@@ -26,7 +26,7 @@ if [ -d "/userdata/themes/ckau-book" ]; then
 fi
 
 
-if [ -d "/userdata/roms/clonehero/gamelist.xml" ]; then
+if [ -f "/userdata/roms/clonehero/gamelist.xml" ]; then
     echo "upgrade clonehero videos"
     /userdata/system/rgsfix/rclone sync PixN-Themes-New:/update/Batocera/clonehero/Custom /userdata/system/.clonehero/Custom --progress
 fi
