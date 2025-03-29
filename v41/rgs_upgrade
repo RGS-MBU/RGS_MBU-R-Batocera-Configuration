@@ -211,6 +211,7 @@ else
     rm /userdata/saves/mame/mame/cfg/zeropnt.cfg
     rm /userdata/saves/mame/mame/cfg/zeropnt2.cfg
     rm /userdata/saves/mame/mame/cfg/zombraid.cfg
+    rm /userdata/saves/mame/mame/cfg/default.cfg
 
 fi
 
