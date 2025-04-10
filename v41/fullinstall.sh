@@ -31,6 +31,10 @@ else
 fi
 
 
+echo 'Stopping emulationstation'
+killall -9 openbox
+sleep 5
+
 echo 'Deleting old directories'
 sleep 5
 
@@ -56,9 +60,11 @@ rm -rf /userdata/Batocera/roms
 mv /userdata/Batocera/* /userdata/
 rm -rf /userdata/Batocera
 
-rm $ARCHIVEPATH
 
-echo 'Upgrade finished. reboot.'
-sleep 5
+#rm $ARCHIVEPATH
+
+echo "The install ${$ARCHIVEPATH} file is not autodelete. Please remove it manually later."
+echo 'RGS full install finished. reboot in 30s.'
+sleep 30
 killall -9 emulationstation
 shutdown -r now
