@@ -303,6 +303,10 @@ if ! grep -q "clonehero.ungroup" /userdata/system/configs/emulationstation/es_se
     sed -i '$i'"$(echo "\\\t<bool name=\"clonehero.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
 fi
 
+if ! grep -q "win98.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"win98.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
 if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
     echo 'RGS Upgrade from v40 to v41 finished. The system will reboot.'
     sleep 5
