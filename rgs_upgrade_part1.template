@@ -88,21 +88,9 @@ if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
 else
     echo 'Deleting old files'
 
-    rm -rf /userdata/system/switch/extra
-    rm -rf /userdata/system/switch/logs
-    rm /userdata/system/switch/Ryujinx-Avalonia.AppImage
-    rm /userdata/system/switch/yuzuEA.AppImage
-    rm /userdata/system/switch/CONFIG.txt
-    rm /userdata/system/switch/Ryujinx-LDN.AppImage
-    rm /userdata/system/switch/Ryujinx-Avalonia.AppImage
-    rm /userdata/system/switch/configgen/GeneratorImporter.py
-    rm /userdata/system/switch/configgen/switchlauncher2.py
-    rm /userdata/system/switch/configgen/switchlauncher.py
-    rm /userdata/system/switch/switch/configgen/generators/Generator.py
+    rm -rf /userdata/system/switch
     rm /usr/share/applications/Ryujinx.desktop
     rm /usr/share/applications/yuzu.desktop
-    rm /userdata/system/switch/Ryujinx.desktop
-    rm /userdata/system/switch/yuzu.desktop
     rm /usr/share/applications/yuyu-config.desktop
     rm /usr/share/applications/yuyuEA-config.desktop
     rm /usr/share/applications/ryujinx-Avalonia-config.desktop
