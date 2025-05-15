@@ -58,6 +58,7 @@ rm -rf /userdata/themes/*
 mv /userdata/Batocera/roms/rgs /userdata/roms/
 rm -rf /userdata/Batocera/roms
 
+shopt -s dotglob
 mv /userdata/Batocera/bios/* /userdata/bios/
 mv /userdata/Batocera/cheats/* /userdata/cheats/
 mv /userdata/Batocera/extractions/* /userdata/extractions/
@@ -68,17 +69,19 @@ mv /userdata/Batocera/music/* /userdata/music/
 mv /userdata/Batocera/recordings/* /userdata/recordings/
 mv /userdata/Batocera/saves/* /userdata/saves/
 mv /userdata/Batocera/screenshots/* /userdata/screenshots/
+mkdir /userdata/shaders
 mv /userdata/Batocera/shaders/* /userdata/shaders/
 mv /userdata/Batocera/splash/* /userdata/splash/
 mv /userdata/Batocera/system/* /userdata/system/
 mv /userdata/Batocera/themes/* /userdata/themes/
+shopt -u dotglob
 
 rm -rf /userdata/Batocera
 
 
 #rm $ARCHIVEPATH
 
-echo "The install ${$ARCHIVEPATH} file is not autodelete. Please remove it manually later."
+echo "The install ${ARCHIVEPATH} file is not autodelete. Please remove it manually later."
 echo 'RGS full install finished. reboot in 30s.'
 sleep 30
 killall -9 emulationstation
