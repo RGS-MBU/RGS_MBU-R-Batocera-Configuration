@@ -38,7 +38,7 @@ sleep 5
 echo 'Deleting old directories'
 sleep 5
 
-
+shopt -s dotglob
 rm -rf /userdata/bios/*
 rm -rf /userdata/cheats/*
 rm -rf /userdata/extractions/*
@@ -54,11 +54,11 @@ rm -rf /userdata/splash/*
 rm -rf /userdata/system/*
 rm -rf /userdata/themes/*
 
-
-mv /userdata/Batocera/roms/rgs /userdata/roms/
+if [ ! -d /userdata/roms/rgs ]; then
+    mv /userdata/Batocera/roms/rgs /userdata/roms/
+fi
 rm -rf /userdata/Batocera/roms
 
-shopt -s dotglob
 mv /userdata/Batocera/bios/* /userdata/bios/
 mv /userdata/Batocera/cheats/* /userdata/cheats/
 mv /userdata/Batocera/extractions/* /userdata/extractions/
@@ -69,7 +69,9 @@ mv /userdata/Batocera/music/* /userdata/music/
 mv /userdata/Batocera/recordings/* /userdata/recordings/
 mv /userdata/Batocera/saves/* /userdata/saves/
 mv /userdata/Batocera/screenshots/* /userdata/screenshots/
-mkdir /userdata/shaders
+if [ ! -d /userdata/shaders ]; then
+    mkdir -p /userdata/shaders
+fi
 mv /userdata/Batocera/shaders/* /userdata/shaders/
 mv /userdata/Batocera/splash/* /userdata/splash/
 mv /userdata/Batocera/system/* /userdata/system/
