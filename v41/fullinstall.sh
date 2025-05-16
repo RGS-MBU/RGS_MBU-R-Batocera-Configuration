@@ -38,6 +38,7 @@ sleep 5
 echo 'Deleting old directories'
 sleep 5
 
+shopt -s dotglob
 
 rm -rf /userdata/bios/*
 rm -rf /userdata/cheats/*
@@ -58,7 +59,6 @@ rm -rf /userdata/themes/*
 mv /userdata/Batocera/roms/rgs /userdata/roms/
 rm -rf /userdata/Batocera/roms
 
-shopt -s dotglob
 mv /userdata/Batocera/bios/* /userdata/bios/
 mv /userdata/Batocera/cheats/* /userdata/cheats/
 mv /userdata/Batocera/extractions/* /userdata/extractions/
