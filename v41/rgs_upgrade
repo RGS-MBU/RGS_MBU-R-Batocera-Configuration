@@ -200,7 +200,7 @@ else
     rm /userdata/saves/mame/mame/cfg/zeropnt2.cfg
     rm /userdata/saves/mame/mame/cfg/zombraid.cfg
     rm /userdata/saves/mame/mame/cfg/default.cfg
-    rm /userdata/bios/switch/firmware/*
+    rm -rf /userdata/bios/switch/firmware/*
     rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered
     rm /userdata/system/configs/Ryujinx/LDNConfig.json
     rm /userdata/system/configs/Ryujinx/BeforeRyu.json
