@@ -1,9 +1,25 @@
 #!/bin/bash
+set "colorCode=E"
+color %colorCode%
+
+echo.
+echo #########################################################
+echo #                                                       #
+echo #                   IMPORTANT NOTICE:                   #
+echo #      IF YOU HAVE PAID ANY FORM OF MONEY FOR THIS      #
+echo #     OR ANY OTHER TEAM PIXEL NOSTALGIA / RGS BUILD     #
+echo #                DEMAND YOUR MONEY BACK!                #
+echo #                                                       #
+echo #         THIS BUILD IS FREELEY AVAILABLE TO ALL        #
+echo #                VIA OUR DISCORD SERVER:                #
+echo #                                                       #
+echo #             https://discord.gg/xNxrAr6sGv             #
+echo #                                                       #
+echo #########################################################
+echo.
 
 echo "Upgrading themes....."
-sleep 1
-
-#curl --silent --output /dev/null https://pixeldrain.com/api/filesystem/pXCC5M4U
+sleep 3
 
 if [ -d "/userdata/themes/ckau-book-PixN" ]; then
     echo "upgrade ckau-book-PixN theme"
