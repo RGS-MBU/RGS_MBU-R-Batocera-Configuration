@@ -1,8 +1,7 @@
 #!/bin/bash
-set "colorCode=E"
-color %colorCode%
+export PS1="\e[0;33m[\u@\h \W]\$ \e[m "
 
-echo.
+echo
 echo #########################################################
 echo #                                                       #
 echo #                   IMPORTANT NOTICE:                   #
@@ -16,7 +15,7 @@ echo #                                                       #
 echo #             https://discord.gg/xNxrAr6sGv             #
 echo #                                                       #
 echo #########################################################
-echo.
+echo
 
 echo "Upgrading themes....."
 sleep 3
