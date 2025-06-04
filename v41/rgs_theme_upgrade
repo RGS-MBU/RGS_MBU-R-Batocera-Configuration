@@ -17,7 +17,8 @@ echo -e "${RED} #                                                       #"
 echo -e "${RED} #########################################################"
 echo ""
 
-echo "Upgrading themes....."
+NC='\033[0m' # No Color
+echo -e "${NC} Upgrading themes....."
 sleep 3
 
 if [ -d "/userdata/themes/ckau-book-PixN" ]; then
