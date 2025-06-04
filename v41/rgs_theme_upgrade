@@ -1,24 +1,26 @@
 #!/bin/bash
-RED='\033[0;33m'
+
+RED="\e[33m"
+GREEN="\e[32m"
+ENDCOLOR="\e[0m"
 
 echo ""
-echo -e "${RED} #########################################################"
-echo -e "${RED} #                                                       #"
-echo -e "${RED} #                   IMPORTANT NOTICE:                   #"
-echo -e "${RED} #      IF YOU HAVE PAID ANY FORM OF MONEY FOR THIS      #"
-echo -e "${RED} #     OR ANY OTHER TEAM PIXEL NOSTALGIA / RGS BUILD     #"
-echo -e "${RED} #                DEMAND YOUR MONEY BACK!                #"
-echo -e "${RED} #                                                       #"
-echo -e "${RED} #         THIS BUILD IS FREELEY AVAILABLE TO ALL        #"
-echo -e "${RED} #                VIA OUR DISCORD SERVER:                #"
-echo -e "${RED} #                                                       #"
-echo -e "${RED} #             https://discord.gg/xNxrAr6sGv             #"
-echo -e "${RED} #                                                       #"
-echo -e "${RED} #########################################################"
+echo -e "${RED} ######################################################### ${ENDCOLOR}"
+echo -e "${RED} #                                                       # ${ENDCOLOR}"
+echo -e "${RED} #                   IMPORTANT NOTICE:                   # ${ENDCOLOR}"
+echo -e "${RED} #      IF YOU HAVE PAID ANY FORM OF MONEY FOR THIS      # ${ENDCOLOR}"
+echo -e "${RED} #     OR ANY OTHER TEAM PIXEL NOSTALGIA / RGS BUILD     # ${ENDCOLOR}"
+echo -e "${RED} #                DEMAND YOUR MONEY BACK!                # ${ENDCOLOR}"
+echo -e "${RED} #                                                       # ${ENDCOLOR}"
+echo -e "${RED} #         THIS BUILD IS FREELEY AVAILABLE TO ALL        # ${ENDCOLOR}"
+echo -e "${RED} #                VIA OUR DISCORD SERVER:                # ${ENDCOLOR}"
+echo -e "${RED} #                                                       # ${ENDCOLOR}"
+echo -e "${RED} #             https://discord.gg/xNxrAr6sGv             # ${ENDCOLOR}"
+echo -e "${RED} #                                                       # ${ENDCOLOR}"
+echo -e "${RED} ######################################################### ${ENDCOLOR}"
 echo ""
 
-NC='\033[0m' # No Color
-echo -e "${NC} Upgrading themes....."
+echo -e "Upgrading themes....."
 sleep 3
 
 if [ -d "/userdata/themes/ckau-book-PixN" ]; then
