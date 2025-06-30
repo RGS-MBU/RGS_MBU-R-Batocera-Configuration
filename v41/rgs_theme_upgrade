@@ -48,3 +48,8 @@ if [ -f "/userdata/roms/clonehero/gamelist.xml" ]; then
     echo "upgrade clonehero videos"
     /userdata/system/rgsfix/rclone sync PixN-Themes-New:/update/Batocera/clonehero/Custom /userdata/system/.clonehero/Custom --progress
 fi
+
+if [ -f "/userdata/roms/vectrex/gamelist.xml" ]; then
+    echo "upgrade vectrex bezels"
+    /userdata/system/rgsfix/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/vectrex /userdata/decorations/mybezels16-9/games/vectrex --progress
+fi
