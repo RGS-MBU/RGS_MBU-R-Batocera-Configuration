@@ -20,6 +20,13 @@ echo -e "${RED} #                                                       # ${ENDC
 echo -e "${RED} ######################################################### ${ENDCOLOR}"
 echo ""
 
+#fix batocera.conf for v42
+echo -e "Update batocera.conf for v42 compatibility....."
+echo -e ""
+echo -e ""
+grep -qxF "+rgs.emulator=sh" /userdata/system/batocera.conf || echo "+rgs.emulator=sh" >> /userdata/system/batocera.conf
+
+ 
 echo -e "Upgrading themes....."
 sleep 3
 
