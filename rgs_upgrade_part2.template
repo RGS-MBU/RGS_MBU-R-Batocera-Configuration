@@ -4,10 +4,10 @@ tar -xvzf $ARCHIVEPATH --directory /userdata/
 rm $ARCHIVEPATH
 
 #workaround lock for v41, to remove in v42
-if [[ -f "/userdata/roms/rgs/rgs_upgrade.sh.new" ]]; then
-    cp /userdata/roms/rgs/rgs_upgrade.sh.new /userdata/roms/rgs/rgs_upgrade.sh
-    rm /userdata/roms/rgs/rgs_upgrade.sh.new
-fi
+#if [[ -f "/userdata/roms/rgs/rgs_upgrade.sh.new" ]]; then
+#    cp /userdata/roms/rgs/rgs_upgrade.sh.new /userdata/roms/rgs/rgs_upgrade.sh
+#    rm /userdata/roms/rgs/rgs_upgrade.sh.new
+#fi
 
 #read new conf after 'RGS TUNING' , for games tuning
 RGSTUNING=$(sed -n '/RGS TUNING/,/END RGS/p' /userdata/system/batocera.conf)
@@ -86,8 +86,8 @@ if ! grep -q "win98.ungroup" /userdata/system/configs/emulationstation/es_settin
     sed -i '$i'"$(echo "\\\t<bool name=\"win98.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
 fi
 
-if [[ "$CURRENTRGSVERSION" =~ ^40 ]]; then
-    echo 'RGS Upgrade from v40 to v41 finished. The system will reboot.'
+if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
+    echo 'RGS Upgrade from v41 to v42 finished. The system will reboot.'
     sleep 5
     reboot
 else
