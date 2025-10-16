@@ -37,6 +37,8 @@ wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $AR
 if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     echo 'Deleting old files from v41'
 
+    rm -rf /userdata/system/wine-bottles/*
+
     rm -rf /userdata/system/switch
     rm /usr/share/applications/Ryujinx.desktop
     rm /usr/share/applications/yuzu.desktop
@@ -45,7 +47,6 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     rm /usr/share/applications/ryujinx-Avalonia-config.desktop
     rm /usr/share/applications/ryujinx-config.desktop
     rm /usr/share/applications/ryujinx-LDN-config.desktop
-
 else
     echo 'Deleting old files'
 
