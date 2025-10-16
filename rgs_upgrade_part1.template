@@ -39,6 +39,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
 
     rm -rf /userdata/system/wine-bottles/*
 
+    rm -rf /userdata/system/configs/winebat
     rm -rf /userdata/system/switch
     rm -rf /userdata/bios/switch/firmware/*
     rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered

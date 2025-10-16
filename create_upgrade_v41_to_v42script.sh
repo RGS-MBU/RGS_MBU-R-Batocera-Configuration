@@ -1,7 +1,7 @@
 #!/bin/bash
 RELEASE="v41"
 CURRENTCOMMIT="HEAD"
-PACKAGE="../RGS_MBU-R-Batocera-Configuration/v42/v41tov42.tar.gz"
+PACKAGE="../RGS_MBU-R-Batocera-Configuration/v42/v41tov42update.tar.gz"
 UPDATESCRIPT="v42/rgs_upgrade"
 
 cd ../Batocera
