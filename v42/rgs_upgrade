@@ -37,6 +37,8 @@ wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $AR
 if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     echo 'Deleting old files from v41'
 
+    rm -rf /userdata/system/wine-bottles/*
+
     rm -rf /userdata/system/switch
     rm -rf /userdata/bios/switch/firmware/*
     rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered
@@ -46,6 +48,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     rm /userdata/system/configs/emulationstation/es_systems_triforce.cfg
     rm /userdata/system/configs/emulationstation/es_systems_gc-jp.cfg
     rm /userdata/system/configs/emulationstation/es_systems_gch.cfg
+    rm /userdata/system/configs/emulationstation/es_systems_ps4.cfg
     rm /userdata/system/configs/evmapy/model3.keys
 
     #batocera pro cleanup
