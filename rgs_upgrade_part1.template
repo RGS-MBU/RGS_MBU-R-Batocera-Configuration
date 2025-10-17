@@ -178,5 +178,5 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
 else
     echo 'Deleting old files'
 
-
+    rm /userdata/system/configs/emulationstation/es_systems_ps4.cfg
 
