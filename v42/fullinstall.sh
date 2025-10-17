@@ -7,7 +7,18 @@ PARENT_PID=$PPID
 # Function to find and kill processes
 kill_processes() {
     # Find all PIDs with files open in /userdata/ (excluding this script and parent shell)
-    PIDS=$(lsof -n 2>/dev/null | grep "^[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  */userdata/" | awk '{print $2}' | grep -v "^${SCRIPT_PID}$" | grep -v "^${PARENT_PID}$" | sort -u)
+    ALL_PIDS=$(lsof -n 2>/dev/null | grep "^[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  */userdata/" | awk '{print $2}' | sort -u)
+    
+    # Filter out script PID, parent PID, and curl processes
+    PIDS=""
+    for pid in $ALL_PIDS; do
+        if [ "$pid" != "$SCRIPT_PID" ] && [ "$pid" != "$PARENT_PID" ]; then
+            cmd=$(ps -p "$pid" -o comm= 2>/dev/null)
+            if [ "$cmd" != "curl" ]; then
+                PIDS="$PIDS $pid"
+            fi
+        fi
+    done
     
     if [[ -z "$PIDS" ]]; then
         return 1  # No processes found
@@ -58,6 +69,7 @@ ARCHIVEPATH="/userdata/$ARCHIVE"
 #fi
 
 
+# Main execution
 echo "Starting process killer for $TARGET_DIR"
 echo "========================================"
 echo ""
@@ -76,15 +88,15 @@ else
 
     echo "Rechecking for remaining processes..."
     
-    # Find remaining PIDs (excluding bash processes)
+    # Find remaining PIDs (excluding bash and curl processes)
     ALL_REMAINING=$(lsof -n 2>/dev/null | grep "^[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  */userdata/" | awk '{print $2}' | sort -u)
     
-    # Filter out script PID and bash processes
+    # Filter out script PID, bash, and curl processes
     REMAINING_PIDS=""
     for pid in $ALL_REMAINING; do
         if [ "$pid" != "$SCRIPT_PID" ]; then
             cmd=$(ps -p "$pid" -o comm= 2>/dev/null)
-            if [ "$cmd" != "bash" ]; then
+            if [ "$cmd" != "bash" ] && [ "$cmd" != "curl" ]; then
                 REMAINING_PIDS="$REMAINING_PIDS $pid"
             fi
         fi
@@ -104,6 +116,7 @@ else
         exit 1
     fi
 fi
+
 
 sleep 5
 
