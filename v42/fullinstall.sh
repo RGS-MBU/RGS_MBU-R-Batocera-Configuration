@@ -38,31 +38,24 @@ kill_processes() {
 ARCHIVE="fullinstall.tar.gz"
 ARCHIVEPATH="/userdata/$ARCHIVE"
 
-#download rclone
-#mkdir -p /userdata/system/.config/rclone/
-#wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /usr/bin/rclone https://pixeldrain.com/api/filesystem/YD1k3dcE/rclone
-#wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O /userdata/system/.config/rclone/rclone.conf https://pixeldrain.com/api/filesystem/YD1k3dcE/rclone.conf
-#chmod +x /usr/bin/rclone
-
-
-#download pack
-echo "Downloading new files..."
-if [ ! -f $ARCHIVEPATH ]; then
-    wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH http://rgsretro1986.ds78102.seedhost.eu/update/v42/fullinstall.tar.gz
-fi
-
-echo "uncompress archive..."
-sleep 5
-
-
-if tar -xvf $ARCHIVEPATH --directory /userdata/
-then
-    echo 'uncompressing archive ok'
-else
-    echo 'error with uncompressing archive. We stop here.'
-    sleep 30
-    exit
-fi
+##download pack
+#echo "Downloading new files..."
+#if [ ! -f $ARCHIVEPATH ]; then
+#    wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH http://rgsretro1986.ds78102.seedhost.eu/update/v42/fullinstall.tar.gz
+#fi
+#
+#echo "uncompress archive..."
+#sleep 5
+#
+#
+#if tar -xvf $ARCHIVEPATH --directory /userdata/
+#then
+#    echo 'uncompressing archive ok'
+#else
+#    echo 'error with uncompressing archive. We stop here.'
+#    sleep 30
+#    exit
+#fi
 
 
 echo "Starting process killer for $TARGET_DIR"
