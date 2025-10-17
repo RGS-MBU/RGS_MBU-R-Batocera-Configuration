@@ -76,47 +76,7 @@ echo ""
 
 echo "Checking for processes..."
 
-if ! kill_processes; then
-    echo ""
-    echo "No processes found with files open in $TARGET_DIR"
-    echo "All clear!"
-else
-    echo ""
-    echo "Waiting 5 seconds before rechecking..."
-    sleep 5
-    echo ""
-
-    echo "Rechecking for remaining processes..."
-    
-    # Find remaining PIDs (excluding bash and curl processes)
-    ALL_REMAINING=$(lsof -n 2>/dev/null | grep "^[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  *[^ ]*  */userdata/" | awk '{print $2}' | sort -u)
-    
-    # Filter out script PID, bash, and curl processes
-    REMAINING_PIDS=""
-    for pid in $ALL_REMAINING; do
-        if [ "$pid" != "$SCRIPT_PID" ]; then
-            cmd=$(ps -p "$pid" -o comm= 2>/dev/null)
-            if [ "$cmd" != "bash" ] && [ "$cmd" != "curl" ]; then
-                REMAINING_PIDS="$REMAINING_PIDS $pid"
-            fi
-        fi
-    done
-
-    if [[ -z "$REMAINING_PIDS" ]]; then
-        echo "No remaining processes found. All clear!"
-    else
-        echo "ERROR: Some processes still have files open in $TARGET_DIR:"
-        echo "PID    COMMAND"
-        echo "----   -------"
-        for pid in $REMAINING_PIDS; do
-            ps -p "$pid" -o pid=,comm= 2>/dev/null
-        done
-        echo ""
-        echo "Script stopped due to remaining processes."
-        exit 1
-    fi
-fi
-
+kill_processes
 
 sleep 5
 
