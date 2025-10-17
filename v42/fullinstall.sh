@@ -135,7 +135,6 @@ rm -rf /userdata/screenshots/*
 rm -rf /userdata/shaders/*
 rm -rf /userdata/splash/*
 rm -rf /userdata/system/*
-rm -rf /userdata/themes/*
 
 
 mv /userdata/Batocera/roms/rgs /userdata/roms/
@@ -154,13 +153,10 @@ mv /userdata/Batocera/screenshots/* /userdata/screenshots/
 mv /userdata/Batocera/shaders/* /userdata/shaders/
 mv /userdata/Batocera/splash/* /userdata/splash/
 mv /userdata/Batocera/system/* /userdata/system/
-mv /userdata/Batocera/themes/* /userdata/themes/
 shopt -u dotglob
 
 rm -rf /userdata/Batocera
 
-
-#rm $ARCHIVEPATH
 
 echo "The install ${ARCHIVEPATH} file is not autodelete. Please remove it manually later."
 echo 'RGS full install finished. reboot in 30s.'
