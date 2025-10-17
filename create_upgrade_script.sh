@@ -1,5 +1,5 @@
 #!/bin/bash
-RELEASE="v41"
+RELEASE="v42"
 CURRENTCOMMIT="HEAD"
 PACKAGE="../RGS_MBU-R-Batocera-Configuration/$RELEASE/update.tar.gz"
 UPDATESCRIPT="$RELEASE/rgs_upgrade"
