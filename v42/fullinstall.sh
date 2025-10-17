@@ -209,7 +209,7 @@ else
         done
 
         if [[ ${#SURVIVORS[@]} -gt 0 ]]; then
-            err "The following PIDs still have files open under $TARGET_DIR after SIGKILL: ${SURVIVORS[*]}"
+            log "The following PIDs still have files open under $TARGET_DIR after SIGKILL: ${SURVIVORS[*]}. We are going to continue."
             for p in "${SURVIVORS[@]}"; do
                 ps -p "$p" -o pid,ppid,uid,comm,args --no-headers 2>/dev/null || true
             done
@@ -221,6 +221,7 @@ fi
 
 sleep 5
 
+echo "test continue"
 
 exit
 
