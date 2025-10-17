@@ -40,6 +40,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     rm -rf /userdata/system/wine-bottles/*
 
     rm -rf /userdata/system/configs/winebat
+    rm -rf /userdata/system/configs/3dsen
     rm -rf /userdata/system/switch
     rm -rf /userdata/bios/switch/firmware/*
     rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered
@@ -179,12 +180,10 @@ else
     echo 'Deleting old files'
 
     rm /userdata/system/configs/emulationstation/es_systems_ps4.cfg
+    rm -rf /userdata/system/configs/3dsen
+    rm /userdata/system/rgs/generators/winebat/batocera-wine
+    rm -rf /userdata/system/configs/winebat
 
-
-rm /userdata/system/rgs/generators/winebat/batocera-wine
- delete mode 100755 system/configs/winebat/batocera-wine
- rm system/configs/winebat/customGenerator.py
- delete mode 100755 system/configs/winebat/emulatorlauncher
 fi
 
 tar -xvzf $ARCHIVEPATH --directory /userdata/
