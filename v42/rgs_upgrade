@@ -180,9 +180,11 @@ else
     echo 'Deleting old files'
 
     rm /userdata/system/configs/emulationstation/es_systems_ps4.cfg
-    rm -rf /userdata/system/configs/3dsen
     rm /userdata/system/rgs/generators/winebat/batocera-wine
+    rm /usedata/system/configs/evmapy/clonehero.keys
     rm -rf /userdata/system/configs/winebat
+    rm -rf /userdata/system/configs/3dsen
+    rm -rf /userdata/system/configs/demul
 
 fi
 
