@@ -39,6 +39,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
 
     rm -rf /userdata/system/wine-bottles/*
 
+    rm /userdata/system/rgs/emulators/switch/citron-optimized-pgo.AppImage
     rm -rf /userdata/system/configs/winebat
     rm -rf /userdata/system/configs/3dsen
     rm -rf /userdata/system/switch
@@ -185,6 +186,7 @@ else
     rm -rf /userdata/system/configs/winebat
     rm -rf /userdata/system/configs/3dsen
     rm -rf /userdata/system/configs/demul
+    rm /userdata/system/rgs/emulators/switch/citron-optimized-pgo.AppImage
 
 fi
 

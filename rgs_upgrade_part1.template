@@ -38,7 +38,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     echo 'Deleting old files from v41'
 
     rm -rf /userdata/system/wine-bottles/*
-
+    rm /userdata/system/rgs/emulators/switch/citron-optimized-pgo.AppImage
     rm -rf /userdata/system/configs/winebat
     rm -rf /userdata/system/configs/3dsen
     rm -rf /userdata/system/configs/demul
@@ -188,4 +188,5 @@ else
     rm -rf /userdata/system/configs/winebat
     rm -rf /userdata/system/configs/3dsen
     rm -rf /userdata/system/configs/demul
+    rm /userdata/system/rgs/emulators/switch/citron-optimized-pgo.AppImage
 
