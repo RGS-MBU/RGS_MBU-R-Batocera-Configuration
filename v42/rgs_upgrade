@@ -39,6 +39,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
 
     rm -rf /userdata/system/wine-bottles/*
 
+    rm /usedata/system/configs/evmapy/clonehero.keys
     rm /userdata/system/rgs/emulators/switch/citron-optimized-pgo.AppImage
     rm -rf /userdata/system/configs/winebat
     rm -rf /userdata/system/configs/3dsen
