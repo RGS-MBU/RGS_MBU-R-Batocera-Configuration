@@ -20,8 +20,13 @@ echo -e "${RED} #                                                       # ${ENDC
 echo -e "${RED} ######################################################### ${ENDCOLOR}"
 echo ""
 
-echo -e "Upgrading themes....."
+echo -e "Upgrading Bios....."
 sleep 3
+/userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress
+
+
+echo -e "Upgrading themes....."
+sleep 1
 
 if [ -d "/userdata/themes/ckau-book-PixN" ]; then
     echo -e "upgrade ckau-book-PixN theme"
