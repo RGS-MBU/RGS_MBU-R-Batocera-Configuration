@@ -242,7 +242,7 @@ rm -rf /userdata/system/*
 mv /userdata/Batocera/roms/rgs /userdata/roms/
 rm -rf /userdata/Batocera/roms
 
-mv /userdata/Batocera/bios/* /userdata/bios/
+#mv /userdata/Batocera/bios/* /userdata/bios/
 mv /userdata/Batocera/cheats/* /userdata/cheats/
 mv /userdata/Batocera/extractions/* /userdata/extractions/
 mv /userdata/Batocera/decorations/* /userdata/decorations/
