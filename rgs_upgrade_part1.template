@@ -37,6 +37,8 @@ wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $AR
 if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     echo 'Deleting old files from v41'
 
+    rm -rf /userdata/system/wine/custom/wine-10.7-amd64
+    rm -rf /userdata/system/wine/custom/wine-proton-10.0-1-amd64
     rm -rf /userdata/system/wine-bottles/*
     rm /usedata/system/configs/evmapy/clonehero.keys
     rm /userdata/system/rgs/emulators/switch/citron-optimized-pgo.AppImage
