@@ -105,24 +105,24 @@ mapfile -t CANDIDATES < <(find_pids_using_target || true)
 ARCHIVE="fullinstall.tar.gz"
 ARCHIVEPATH="/userdata/$ARCHIVE"
 
-##download pack
-#echo "Downloading new files..."
-#if [ ! -f $ARCHIVEPATH ]; then
-#    wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH http://rgsretro1986.ds78102.seedhost.eu/update/v42/fullinstall.tar.gz
-#fi
-#
-#echo "uncompress archive..."
-#sleep 5
-#
-#
-#if tar -xvf $ARCHIVEPATH --directory /userdata/
-#then
-#    echo 'uncompressing archive ok'
-#else
-#    echo 'error with uncompressing archive. We stop here.'
-#    sleep 30
-#    exit
-#fi
+#download pack
+echo "Downloading new files..."
+if [ ! -f $ARCHIVEPATH ]; then
+    wget  -q --show-progress --progress=bar --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH http://rgsretro1986.ds78102.seedhost.eu/update/v42/fullinstall.tar.gz
+fi
+
+echo "uncompress archive..."
+sleep 5
+
+
+if tar -xvf $ARCHIVEPATH --directory /userdata/
+then
+    echo 'uncompressing archive ok'
+else
+    echo 'error with uncompressing archive. We stop here.'
+    sleep 30
+    exit
+fi
 
 
 if [[ ${#CANDIDATES[@]} -eq 0 ]]; then
@@ -219,12 +219,6 @@ else
     fi
 fi
 
-sleep 5
-
-echo "test continue"
-
-exit
-
 echo 'Deleting old directories'
 sleep 5
 
@@ -264,6 +258,46 @@ mv /userdata/Batocera/system/* /userdata/system/
 shopt -u dotglob
 
 rm -rf /userdata/Batocera
+
+mkdir /userdata/themes/ckau-book-PixN
+
+read -p "Do you want to install theme Hypermax-Plus-PixN (y/n): " answer
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+    mkdir /userdata/themes/Hypermax-Plus-PixN
+fi
+
+read -p "Do you want to install theme Carbon-PixN (y/n): " answer
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+    mkdir /userdata/themes/Carbon-PixN
+fi
+
+echo -e "Bios installation...."
+/userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --skip-links
+
+
+echo -e "Themes installation...."
+sleep 1
+
+if [ -d "/userdata/themes/ckau-book-PixN" ]; then
+    echo -e "upgrade ckau-book-PixN theme"
+    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/ckau-book-PixN /userdata/themes/ckau-book-PixN --progress
+fi
+
+if [ -d "/userdata/themes/Hypermax-Plus-PixN" ]; then
+    echo -e "upgrade Hypermax-Plus-PixN theme"
+    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/Hypermax-Plus-PixN /userdata/themes/Hypermax-Plus-PixN --exclude=/_inc/videos/** --progress
+fi
+
+if [ -d "/userdata/themes/Carbon-PixN" ]; then
+    echo -e "upgrade Carbon-PixN theme"
+    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/Carbon-PixN /userdata/themes/Carbon-PixN --progress
+fi
+
+if [ -d "/userdata/themes/ckau-book" ]; then
+    echo -e "upgrade ckau-book theme"
+    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/ckau-book /userdata/themes/ckau-book --progress
+fi
+
 
 
 echo "The install ${ARCHIVEPATH} file is not autodelete. Please remove it manually later."
