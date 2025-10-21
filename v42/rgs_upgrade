@@ -32,7 +32,7 @@ fi
 
 #download pack
 echo "Downloading new files..."
-wget --progress=dot:binary --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "http://rgsretro1986.ds78102.seedhost.eu/update/v42/$ARCHIVE"
+wget  -q --show-progress --progress=bar --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "http://rgsretro1986.ds78102.seedhost.eu/update/v42/$ARCHIVE"
 
 if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     echo 'Deleting old files from v41'
