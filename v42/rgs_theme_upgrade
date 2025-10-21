@@ -22,7 +22,7 @@ echo ""
 
 echo -e "Upgrading Bios....."
 sleep 3
-/userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --copy-links
+/userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --skip-links
 
 
 echo -e "Upgrading themes....."
