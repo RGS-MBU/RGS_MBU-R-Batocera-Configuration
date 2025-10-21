@@ -263,12 +263,12 @@ mkdir /userdata/themes/ckau-book-PixN
 
 read -p "Do you want to install theme Hypermax-Plus-PixN (y/n): " answer
 if [[ "$answer" =~ ^[Yy]$ ]]; then
-    mkdir /userdata/themes/Hypermax-Plus-PixN
+    mkdir -p /userdata/themes/Hypermax-Plus-PixN
 fi
 
 read -p "Do you want to install theme Carbon-PixN (y/n): " answer
 if [[ "$answer" =~ ^[Yy]$ ]]; then
-    mkdir /userdata/themes/Carbon-PixN
+    mkdir -p /userdata/themes/Carbon-PixN
 fi
 
 echo -e "Bios installation...."
