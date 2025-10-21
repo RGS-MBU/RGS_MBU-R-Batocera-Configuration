@@ -44,6 +44,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     rm /userdata/system/rgs/emulators/switch/citron-optimized-pgo.AppImage
     rm -rf /userdata/system/configs/winebat
     rm -rf /userdata/system/configs/3dsen
+    rm -rf /userdata/system/configs/demul
     rm -rf /userdata/system/switch
     rm -rf /userdata/bios/switch/firmware/*
     rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered
