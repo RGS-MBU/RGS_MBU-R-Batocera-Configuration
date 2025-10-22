@@ -231,7 +231,7 @@ sleep 5
 
 shopt -s dotglob
 
-rm -rf /userdata/bios/*
+#rm -rf /userdata/bios/*
 rm -rf /userdata/cheats/*
 rm -rf /userdata/extractions/*
 rm -rf /userdata/decorations/*
