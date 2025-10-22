@@ -261,6 +261,15 @@ rm -rf /userdata/Batocera
 
 mkdir /userdata/themes/ckau-book-PixN
 
+echo -e "Bios installation...."
+/userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --skip-links
+
+if [ -d "/userdata/themes/ckau-book-PixN" ]; then
+    echo -e "upgrade ckau-book-PixN theme"
+    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/ckau-book-PixN /userdata/themes/ckau-book-PixN --progress
+fi
+
+
 read -p "Do you want to install theme Hypermax-Plus-PixN (y/n): " answer
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     mkdir -p /userdata/themes/Hypermax-Plus-PixN
@@ -271,17 +280,10 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
     mkdir -p /userdata/themes/Carbon-PixN
 fi
 
-echo -e "Bios installation...."
-/userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --skip-links
-
 
 echo -e "Themes installation...."
 sleep 1
 
-if [ -d "/userdata/themes/ckau-book-PixN" ]; then
-    echo -e "upgrade ckau-book-PixN theme"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/ckau-book-PixN /userdata/themes/ckau-book-PixN --progress
-fi
 
 if [ -d "/userdata/themes/Hypermax-Plus-PixN" ]; then
     echo -e "upgrade Hypermax-Plus-PixN theme"
