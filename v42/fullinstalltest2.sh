@@ -1,11 +1,11 @@
 #!/bin/bash
 
-read -p "Do you want to install theme Hypermax-Plus-PixN (y/n): " answer
+read -p "Do you want to install theme Hypermax-Plus-PixN (y/n): " answer  < /dev/tty
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     mkdir -p /userdata/themes/Hypermax-Plus-PixN
 fi
 
-read -p "Do you want to install theme Carbon-PixN (y/n): " answer
+read -p "Do you want to install theme Carbon-PixN (y/n): " answer  < /dev/tty
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     mkdir -p /userdata/themes/Carbon-PixN
 fi
