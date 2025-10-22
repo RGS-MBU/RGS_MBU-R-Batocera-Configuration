@@ -108,7 +108,10 @@ ARCHIVEPATH="/userdata/$ARCHIVE"
 #download pack
 echo "Downloading new files..."
 if [ ! -f $ARCHIVEPATH ]; then
-    wget  -q --show-progress --progress=bar --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH http://rgsretro1986.ds78102.seedhost.eu/update/v42/fullinstall.tar.gz
+    if ! wget -q --show-progress --progress=bar --no-check-certificate --no-cache --no-cookies -O "$ARCHIVEPATH" http://rgsretro1986.ds78102.seedhost.eu/update/v42/fullinstall.tar.gz; then
+        echo "Error: Failed to download file" >&2
+        exit 1
+    fi
 fi
 
 echo "uncompress archive..."
