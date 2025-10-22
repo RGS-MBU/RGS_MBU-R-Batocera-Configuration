@@ -276,13 +276,14 @@ echo "to retrieve the missing bios,themes,bezels..."
 echo "No need to re-execute the full install again"
 sleep 3
 
-echo -e "Bios installation...."
-/userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --skip-links
 
 if [ -d "/userdata/themes/ckau-book-PixN" ]; then
     echo -e "upgrade ckau-book-PixN theme"
     /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/ckau-book-PixN /userdata/themes/ckau-book-PixN --progress
 fi
+
+echo -e "Bios installation...."
+/userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --skip-links
 
 
 read -p "Do you want to install theme Hypermax-Plus-PixN (y/n): " answer
