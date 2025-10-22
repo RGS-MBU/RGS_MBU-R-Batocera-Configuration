@@ -266,7 +266,6 @@ mv /userdata/Batocera/system/* /userdata/system/
 shopt -u dotglob
 
 rm -rf /userdata/Batocera
-rm $ARCHIVEPATH
 
 mkdir /userdata/themes/ckau-book-PixN
 
