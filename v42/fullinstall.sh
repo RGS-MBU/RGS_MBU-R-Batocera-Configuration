@@ -125,6 +125,9 @@ else
 fi
 
 
+echo "Shutting down emulationstation to avoid files locks in /userdata/.... The monitor screen on is going black, this is normal"
+sleep 1
+
 if [[ ${#CANDIDATES[@]} -eq 0 ]]; then
     log "No processes have files open in $TARGET_DIR. Continuing..."
 else
