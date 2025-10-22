@@ -249,7 +249,6 @@ rm -rf /userdata/system/*
 mv /userdata/Batocera/roms/rgs /userdata/roms/
 rm -rf /userdata/Batocera/roms
 
-#mv /userdata/Batocera/bios/* /userdata/bios/
 mv /userdata/Batocera/cheats/* /userdata/cheats/
 mv /userdata/Batocera/extractions/* /userdata/extractions/
 mv /userdata/Batocera/decorations/* /userdata/decorations/
@@ -280,17 +279,17 @@ echo -e "Bios installation...."
 /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --skip-links
 
 if [ -d "/userdata/themes/ckau-book-PixN" ]; then
-    echo -e "upgrade ckau-book-PixN theme"
+    echo -e "install default ckau-book-PixN theme"
     /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/ckau-book-PixN /userdata/themes/ckau-book-PixN --progress
 fi
 
 
-read -p "Do you want to install theme Hypermax-Plus-PixN (y/n): " answer
+read -p "Do you want to install theme Hypermax-Plus-PixN (y/n): " answer < /dev/tty
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     mkdir -p /userdata/themes/Hypermax-Plus-PixN
 fi
 
-read -p "Do you want to install theme Carbon-PixN (y/n): " answer
+read -p "Do you want to install theme Carbon-PixN (y/n): " answer < /dev/tty
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     mkdir -p /userdata/themes/Carbon-PixN
 fi
@@ -309,12 +308,6 @@ if [ -d "/userdata/themes/Carbon-PixN" ]; then
     echo -e "upgrade Carbon-PixN theme"
     /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/Carbon-PixN /userdata/themes/Carbon-PixN --progress
 fi
-
-if [ -d "/userdata/themes/ckau-book" ]; then
-    echo -e "upgrade ckau-book theme"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/ckau-book /userdata/themes/ckau-book --progress
-fi
-
 
 
 echo 'RGS full install finished. reboot in 30s.'
