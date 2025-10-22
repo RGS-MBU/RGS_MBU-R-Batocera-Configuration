@@ -259,6 +259,7 @@ mv /userdata/Batocera/music/* /userdata/music/
 mv /userdata/Batocera/recordings/* /userdata/recordings/
 mv /userdata/Batocera/saves/* /userdata/saves/
 mv /userdata/Batocera/screenshots/* /userdata/screenshots/
+mkdir /userdata/shaders/
 mv /userdata/Batocera/shaders/* /userdata/shaders/
 mv /userdata/Batocera/splash/* /userdata/splash/
 mv /userdata/Batocera/system/* /userdata/system/
