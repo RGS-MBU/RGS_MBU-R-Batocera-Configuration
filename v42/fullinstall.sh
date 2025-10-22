@@ -269,6 +269,12 @@ rm -rf /userdata/Batocera
 
 mkdir /userdata/themes/ckau-book-PixN
 
+echo "Base installation Done !  We are now downloading bios && themes."
+echo "If you cancel the script after this, you can simply launch your graphical RGS updater from ES menu"
+echo "to retrieve the missing bios,themes,bezels..."
+echo "No need to re-execute the full install again"
+sleep 3
+
 echo -e "Bios installation...."
 /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --skip-links
 
