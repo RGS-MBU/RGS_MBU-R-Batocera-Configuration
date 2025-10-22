@@ -102,6 +102,11 @@ log "Excluding ancestors: ${ANCESTORS[*]}"
 mapfile -t CANDIDATES < <(find_pids_using_target || true)
 
 
+read -p "After the install, do you want to install extra theme Hypermax-Plus-PixN (y/n): " answer1 < /dev/tty
+
+read -p "After the install, do you want to install extra theme Carbon-PixN (y/n): " answer2 < /dev/tty
+
+
 ARCHIVE="fullinstall.tar.gz"
 ARCHIVEPATH="/userdata/$ARCHIVE"
 
@@ -284,28 +289,18 @@ if [ -d "/userdata/themes/ckau-book-PixN" ]; then
 fi
 
 
-read -p "Do you want to install theme Hypermax-Plus-PixN (y/n): " answer1 < /dev/tty
-if [[ "$answer1" =~ ^[Yy]$ ]]; then
-    mkdir -p /userdata/themes/Hypermax-Plus-PixN
-fi
-
-read -p "Do you want to install theme Carbon-PixN (y/n): " answer2 < /dev/tty
-if [[ "$answer2" =~ ^[Yy]$ ]]; then
-    mkdir -p /userdata/themes/Carbon-PixN
-fi
-
-
 echo -e "Themes installation...."
 sleep 1
 
-
-if [ -d "/userdata/themes/Hypermax-Plus-PixN" ]; then
-    echo -e "upgrade Hypermax-Plus-PixN theme"
+if [[ "$answer1" =~ ^[Yy]$ ]]; then
+    echo -e "install Hypermax-Plus-PixN theme"
+    mkdir -p /userdata/themes/Hypermax-Plus-PixN
     /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/Hypermax-Plus-PixN /userdata/themes/Hypermax-Plus-PixN --exclude=/_inc/videos/** --progress
 fi
 
-if [ -d "/userdata/themes/Carbon-PixN" ]; then
-    echo -e "upgrade Carbon-PixN theme"
+if [[ "$answer2" =~ ^[Yy]$ ]]; then
+    echo -e "install Carbon-PixN theme"
+    mkdir -p /userdata/themes/Carbon-PixN
     /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/Carbon-PixN /userdata/themes/Carbon-PixN --progress
 fi
 
