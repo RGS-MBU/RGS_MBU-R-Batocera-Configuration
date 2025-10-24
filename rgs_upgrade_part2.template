@@ -1,6 +1,6 @@
 fi
 
-tar -xvzf $ARCHIVEPATH --directory /userdata/
+tar -xvzf $ARCHIVEPATH --overwrite --directory /userdata/
 rm $ARCHIVEPATH
 
 #workaround lock for v41, to remove in v42
