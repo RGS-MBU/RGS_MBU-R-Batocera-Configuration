@@ -111,6 +111,7 @@ ARCHIVE="fullinstall.tar.gz"
 ARCHIVEPATH="/userdata/$ARCHIVE"
 
 #download pack
+echo ""
 echo "Downloading new files..."
 if [ ! -f $ARCHIVEPATH ]; then
     if ! wget -q --show-progress --progress=bar --no-check-certificate --no-cache --no-cookies -O "$ARCHIVEPATH" http://rgsretro1986.ds78102.seedhost.eu/update/v42/fullinstall.tar.gz; then
@@ -120,20 +121,24 @@ if [ ! -f $ARCHIVEPATH ]; then
     fi
 fi
 
+echo ""
 echo "uncompress archive..."
 sleep 5
 
 
 if tar -xvf $ARCHIVEPATH --directory /userdata/
 then
+    echo ""
     echo 'uncompressing archive ok'
 else
+    echo ""
     echo 'error with uncompressing archive. We stop here.'
     sleep 30
     exit
 fi
 
 
+echo ""
 echo "Shutting down emulationstation to avoid files locks in /userdata/.... The monitor screen on is going black, this is normal"
 sleep 1
 
@@ -231,7 +236,9 @@ else
     fi
 fi
 
+echo ""
 echo 'Deleting old directories'
+echo ""
 sleep 5
 
 shopt -s dotglob
@@ -274,13 +281,19 @@ rm $ARCHIVEPATH
 
 mkdir /userdata/themes/ckau-book-PixN
 
-echo "Base installation Done !  We are now downloading bios && themes."
-echo "If you cancel the script after this, you can simply launch your graphical RGS updater from ES menu"
-echo "to retrieve the missing bios,themes,bezels..."
-echo "No need to re-execute the full install again"
+
+echo -e "Base installation Done! We are now downloading bios && themes..."
+echo -e ""
+echo -e "######################################################################"
+echo -e "# If you cancel the script after this point, you can simply launch   #"
+echo -e "# your graphical RGS updater from ES menu to retrieve the missing    #"
+echo -e "# bios,themes,bezels... No need to re-execute the full install again #"
+echo -e "######################################################################"
+echo -e ""
 sleep 3
 
 echo -e "Bios installation...."
+echo ""
 /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Batocera/bios /userdata/bios --progress --skip-links
 
 if [ -d "/userdata/themes/ckau-book-PixN" ]; then
@@ -288,24 +301,30 @@ if [ -d "/userdata/themes/ckau-book-PixN" ]; then
     /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/ckau-book-PixN /userdata/themes/ckau-book-PixN --progress
 fi
 
-
+echo ""
 echo -e "Themes installation...."
+echo ""
 sleep 1
 
 if [[ "$answer1" =~ ^[Yy]$ ]]; then
+    echo ""
     echo -e "install Hypermax-Plus-PixN theme"
+    echo ""
     mkdir -p /userdata/themes/Hypermax-Plus-PixN
     /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/Hypermax-Plus-PixN /userdata/themes/Hypermax-Plus-PixN --exclude=/_inc/videos/** --progress
 fi
 
 if [[ "$answer2" =~ ^[Yy]$ ]]; then
+    echo ""
     echo -e "install Carbon-PixN theme"
+    echo ""
     mkdir -p /userdata/themes/Carbon-PixN
     /userdata/system/rgs/rclone sync PixN-Themes-New:/update/Themes/Carbon-PixN /userdata/themes/Carbon-PixN --progress
 fi
 
-
+echo ""
 echo 'RGS full install finished. reboot in 30s.'
+echo ""
 sleep 30
 killall -9 emulationstation
 shutdown -r now
