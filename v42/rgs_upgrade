@@ -37,9 +37,9 @@ wget  -q --show-progress --progress=bar --no-check-certificate --no-cache --no-c
 if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     echo 'Deleting old files from v41'
 
-    rm -rf /userdata/system/wine-bottles/*
     rm -rf /userdata/system/wine/custom/wine-10.7-amd64
     rm -rf /userdata/system/wine/custom/wine-proton-10.0-1-amd64
+    rm -rf /userdata/system/wine-bottles/*
     rm /usedata/system/configs/evmapy/clonehero.keys
     rm /userdata/system/rgs/emulators/switch/citron-optimized-pgo.AppImage
     rm -rf /userdata/system/configs/winebat
@@ -49,6 +49,8 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
     rm -rf /userdata/bios/switch/firmware/*
     rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered
     rm -rf /userdata/system/rgsfix
+    rm /usedata/system/configs/evmapy/clonehero.keys
+
     rm /userdata/system/configs/emulationstation/es_systems_atarijaguarcd.cfg
     rm /userdata/system/configs/emulationstation/es_systems_lindbergh.cfg
     rm /userdata/system/configs/emulationstation/es_systems_triforce.cfg
@@ -183,9 +185,11 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
 else
     echo 'Deleting old files'
 
+rm /userdata/system/configs/emulationstation/es_systems_megacd.cfg
+
 fi
 
-tar -xvzf $ARCHIVEPATH --directory /userdata/
+tar -xvzf $ARCHIVEPATH --overwrite --directory /userdata/
 rm $ARCHIVEPATH
 
 #workaround lock for v41, to remove in v42
