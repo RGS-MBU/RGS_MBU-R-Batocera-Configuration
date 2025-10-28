@@ -185,7 +185,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
 else
     echo 'Deleting old files'
 
-rm /userdata/system/configs/emulationstation/es_systems_megacd.cfg
+
 
 fi
 
@@ -236,6 +236,10 @@ fi
 
 if ! grep -q "megacd-jp.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
     sed -i '$i'"$(echo "\\\t<bool name=\"megacd-jp.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "segacd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"segacd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
 fi
 
 if ! grep -q "megacd32x.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
