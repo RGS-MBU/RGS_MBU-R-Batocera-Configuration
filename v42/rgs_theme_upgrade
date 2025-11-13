@@ -59,60 +59,60 @@ sleep 1
 
 if [ -f "/userdata/roms/vectrex/gamelist.xml" ]; then
     echo -e "upgrade vectrex bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/vectrex /userdata/decorations/mybezels16-9/games/vectrex --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/vectrex /userdata/decorations/mybezels16-9/games/vectrex --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/neogeo/gamelist.xml" ]; then
     echo -e "upgrade neogeo bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/neogeo /userdata/decorations/mybezels16-9/games/neogeo --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/neogeo /userdata/decorations/mybezels16-9/games/neogeo --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/mame/gamelist.xml" ]; then
     echo -e "upgrade mame bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/mame /userdata/decorations/mybezels16-9/games/mame --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/mame /userdata/decorations/mybezels16-9/games/mame --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/fbneo/gamelist.xml" ]; then
     echo -e "upgrade fbneo bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/fbneo /userdata/decorations/mybezels16-9/games/fnbeo --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/fbneo /userdata/decorations/mybezels16-9/games/fnbeo --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/cps1/gamelist.xml" ]; then
     echo -e "upgrade cps1 bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/cps1 /userdata/decorations/mybezels16-9/games/cps1 --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/cps1 /userdata/decorations/mybezels16-9/games/cps1 --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/cps2/gamelist.xml" ]; then
     echo -e "upgrade cps2 bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/cps2 /userdata/decorations/mybezels16-9/games/cps2 --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/cps2 /userdata/decorations/mybezels16-9/games/cps2 --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/cps3/gamelist.xml" ]; then
     echo -e "upgrade cps3 bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/cps3 /userdata/decorations/mybezels16-9/games/cps3 --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/cps3 /userdata/decorations/mybezels16-9/games/cps3 --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/naomi/gamelist.xml" ]; then
     echo -e "upgrade naomi bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/naomi /userdata/decorations/mybezels16-9/games/naomi --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/naomi /userdata/decorations/mybezels16-9/games/naomi --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/naomi2/gamelist.xml" ]; then
     echo -e "upgrade naomi2 bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/naomi2 /userdata/decorations/mybezels16-9/games/naomi2 --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/naomi2 /userdata/decorations/mybezels16-9/games/naomi2 --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/igspgm/gamelist.xml" ]; then
     echo -e "upgrade igspgm bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/igspgm /userdata/decorations/mybezels16-9/games/igspgm --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/igspgm /userdata/decorations/mybezels16-9/games/igspgm --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/intellivision/gamelist.xml" ]; then
     echo -e "upgrade intellivision bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/intellivision /userdata/decorations/mybezels16-9/games/intellivision --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/intellivision /userdata/decorations/mybezels16-9/games/intellivision --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/gaelco/gamelist.xml" ]; then
     echo -e "upgrade gaelco bezels"
-    /userdata/system/rgs/rclone sync PixN-Themes-New:/update/decorations/mybezels16-9/games/gaelco /userdata/decorations/mybezels16-9/games/gaelco --progress
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/gaelco /userdata/decorations/mybezels16-9/games/gaelco --progress --ignore-existing
 fi
