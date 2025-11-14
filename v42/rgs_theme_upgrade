@@ -74,7 +74,7 @@ fi
 
 if [ -f "/userdata/roms/fbneo/gamelist.xml" ]; then
     echo -e "upgrade fbneo bezels"
-    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/fbneo /userdata/decorations/mybezels16-9/games/fnbeo --progress --ignore-existing
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/fbneo /userdata/decorations/mybezels16-9/games/fbneo --progress --ignore-existing
 fi
 
 if [ -f "/userdata/roms/cps1/gamelist.xml" ]; then
