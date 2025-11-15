@@ -116,3 +116,9 @@ if [ -f "/userdata/roms/gaelco/gamelist.xml" ]; then
     echo -e "upgrade gaelco bezels"
     /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/gaelco /userdata/decorations/mybezels16-9/games/gaelco --progress --ignore-existing
 fi
+
+if [ -f "/userdata/roms/singe/gamelist.xml" ]; then
+    echo -e "upgrade singe bezels"
+    /userdata/system/rgs/rclone copy PixN-Themes-New:/update/decorations/mybezels16-9/games/singe /userdata/system/configs/hypseus-singe/bezels --progress --ignore-existing
+fi
+
