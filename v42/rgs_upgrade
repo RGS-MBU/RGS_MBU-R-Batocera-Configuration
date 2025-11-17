@@ -185,8 +185,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^41 ]]; then
 else
     echo 'Deleting old files'
 
-
-
+    rm /userdata/system/configs/evmapy/gaelco.keys
 fi
 
 tar -xvzf $ARCHIVEPATH --overwrite --directory /userdata/
