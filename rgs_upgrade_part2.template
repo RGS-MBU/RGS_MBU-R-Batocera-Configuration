@@ -27,6 +27,7 @@ echo "$ENDCONF" >> /userdata/system/batocera.conf.new
 mv /userdata/system/batocera.conf.new /userdata/system/batocera.conf
 
 /usr/bin/batocera-services enable rgs_config
+/usr/bin/batocera-services enable rgs_download
 
 echo "Update settings"
 
