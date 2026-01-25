@@ -186,6 +186,7 @@ else
     echo 'Deleting old files'
 
     rm /userdata/system/configs/evmapy/gaelco.keys
+    rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered/*
 fi
 
 tar -xvzf $ARCHIVEPATH --overwrite --directory /userdata/
