@@ -121,6 +121,26 @@ if [ ! -f $ARCHIVEPATH ]; then
     fi
 fi
 
+
+echo ""
+echo "downloaded archive verification..."
+
+
+EXPECTED_CHECKSUM="f5a81fda8d8e29879fa0858007500f72"
+ACTUAL_CHECKSUM=$(md5sum "$ARCHIVEPATH" | awk '{print $1}')
+ACTUAL_SIZE=$(stat -c%s "$ARCHIVEPATH")
+
+if [[ "$ACTUAL_CHECKSUM" != "$EXPECTED_CHECKSUM" ]]; then
+    echo "ERROR: MD5 checksum error on install archive. Abording installation!"
+    echo "Expected: $EXPECTED"
+    echo "Actual:   $ACTUAL"
+    echo "Actual size:   $ACTUAL_SIZE"
+    echo "Downloaded install archive is keeped in $ARCHIVEPATH. Please delete it before trying a new install"
+    exit 1
+fi
+
+
+
 echo ""
 echo "uncompress archive..."
 sleep 5
