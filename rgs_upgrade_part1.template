@@ -62,7 +62,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  rm /userdata/system/rgs/fix/supermodel
  rm /userdata/system/rgs/fix/supermodelGenerator.py
  rm /userdata/system/rgs/fix/xeniaGenerator.py
- rm -rf /userdata/system/wine/dxvk/*
+ rm -rf /userdata/system/wine/dxvk
 
 
  [ -d /userdata/roms/bbc ] && [ ! -e /userdata/roms/bbcmicro ] && mv /userdata/roms/bbc /userdata/roms/bbcmicro
