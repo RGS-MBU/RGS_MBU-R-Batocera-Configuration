@@ -63,6 +63,19 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  rm /userdata/system/rgs/fix/supermodelGenerator.py
  rm /userdata/system/rgs/fix/xeniaGenerator.py
  rm -rf /userdata/system/wine/dxvk/*
+
+
+ [ -d /userdata/roms/bbc ] && [ ! -e /userdata/roms/bbcmicro ] && mv /userdata/roms/bbc /userdata/roms/bbcmicro
+ [ -d /userdata/roms/bk001001 ] && [ ! -e /userdata/roms/bk ] && mv /userdata/roms/bk001001 /userdata/roms/bk
+ [ -d /userdata/roms/dragon32 ] && [ ! -e /userdata/roms/dragon64 ] && mv /userdata/roms/dragon32 /userdata/roms/dragon64
+ [ -d /userdata/roms/o2em ] && [ ! -e /userdata/roms/odyssey2 ] && mv /userdata/roms/o2em /userdata/roms/odyssey2
+ [ -d /userdata/roms/msu-md ] && [ ! -e /userdata/roms/megadrive-msu ] && mv /userdata/roms/msu-md /userdata/roms/megadrive-msu
+ [ -d /userdata/roms/xash3d_fwgs ] && [ ! -e /userdata/roms/halflife ] && mv /userdata/roms/xash3d_fwgs /userdata/roms/halflife
+ [ -d /userdata/roms/plugnplay ] && [ ! -e /userdata/roms/tvgames ] && mv /userdata/roms/plugnplay /userdata/roms/tvgames
+ [ -d /userdata/roms/astrocde ] && [ ! -e /userdata/roms/astrocade ] && mv /userdata/roms/astrocde /userdata/roms/astrocade
+ [ -d /userdata/roms/iortcw ] && [ ! -e /userdata/roms/rtcw ] && mv /userdata/roms/iortcw /userdata/roms/rtcw
+ [ -d /userdata/roms/casloopy ] && [ ! -e /userdata/roms/loopy ] && mv /userdata/roms/casloopy /userdata/roms/loopy
+
 else
     echo 'Deleting old files'
 
