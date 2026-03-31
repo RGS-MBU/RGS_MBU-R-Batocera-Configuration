@@ -57,7 +57,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  rm /userdata/system/rgs/emulators/demul/demul_d3d11.log
  rm -rf /userdata/system/rgs/emulators/demul/scache/*
  rm /userdata/system/rgs/fix/namco2x6/Play
- rm -rf /userdata/system/system/rgs/fix/namco2x6/arcadedefs
+ rm -rf /userdata/system/rgs/fix/namco2x6/arcadedefs
  rm /userdata/system/rgs/fix/Supermodel.ini.template
  rm /userdata/system/rgs/fix/supermodel
  rm /userdata/system/rgs/fix/supermodelGenerator.py
