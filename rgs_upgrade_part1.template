@@ -54,6 +54,16 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  rm /userdata/system/configs/emulationstation/es_systems_segaai.cfg
  rm /userdata/system/configs/emulationstation/es_systems_snescd.cfg
  rm /userdata/system/configs/emulationstation/es_systems_sv8000.cfg
+ rm /userdata/system/configs/evmapy/bk0010.keys
+ rm /userdata/system/configs/evmapy/cgenie.keys
+ rm /userdata/system/configs/evmapy/dragon32.keys
+ rm /userdata/system/configs/evmapy/mz2500.keys
+ rm /userdata/system/configs/evmapy/oric1.keys
+ rm /userdata/system/configs/evmapy/pv2000.keys
+ rm /userdata/system/configs/evmapy/rx78.keys
+ rm /userdata/system/configs/evmapy/sv8000.keys
+ rm /userdata/system/configs/evmapy/triforce.keys
+
  rm /userdata/system/rgs/emulators/demul/demul_d3d11.log
  rm -rf /userdata/system/rgs/emulators/demul/scache/*
  rm /userdata/system/rgs/fix/namco2x6/Play
