@@ -80,6 +80,452 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
 else
     echo 'Deleting old files'
 
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/b4c1d635172d4014d7f5390105cc8c0e.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/00b7c40c749108f42bdebad952179172.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/413e3ec1cb73021c6ec7bb96cbc8f628.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/171d44f30e4a37a7d63392a8c977c08b.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/18fab0c7fd957281825ceda9411bf256.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/2bb83c45611da1982e794dd45056728d.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/2bb4c8dd76f91770c7eb33028171614a.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/4cb18fa674b45e9edc6af6b559a3812e.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/7ad4392482cae5d8d3e6b61bc73d8848.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/02f98e8a80564048a18b655b5950910b.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/ef7f6804d14eb023dfbc69794b7fa79c.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/18c17d28ec4141eca160da4b05cee857.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/9273a4b9cd677dcfc9fba14ad10044bb.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/ddc08cb04e735b6ec6e884dba7e96082.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/e5c9b870de8cfb8203ea6cee0b71a756.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/3f060cd13e25d687528a1453c4792800.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/d9b618fed832e434ce347930af753a05.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/400c8537a852ba841ee79b8de43d8cf6.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/b4c73d16f248a03ff84f20755c74c93e.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/64345d8ceda361f2419162163026cee5.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/35d6eb2abf908409b3488caa836c655d.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/4f104754c242ce499ad589d7d2ef95f9.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/025935944fe257206b7618dd57487ea3.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/eea423ac73acc4c409e2031dc6b78048.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/129f278c3c7ce5e571d2dfb380ade81d.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/33f16bfedae02144a87b760555877b53.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/f7392f293e4fbc535fec60c23a8da99d.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/890f9f69107c74e994bfca5c96232302.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/fd1033724d858e0f7ec4696db781af3c.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/b4216df1ddc353c939ee5a983ee05ebb.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/b7c1d14303252674ad0c5bd7e4277bf9.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/27048d8cf9d1a95675990b319b3964cf.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/5b95ad015454a2428f40a5076793018b.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/c13d83babfbba3d316ad8e4fb9ea3d1d.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/d52185ee35b328e746862ee1c94283e4.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/486bd40bf2600f7ec683807b5ad9b334.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/a7797cc91e8c0ed3d3d5d1d4d163f5aa.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/9f2d38ce1ea274e8721fdf2b8f588b47.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/35835b221a62ca73763455914bf0e9aa.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/52920c5ca2047a0efa6781964ea318b1.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/58bfa62c507b32a346151d3eadd112fd.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/d31b44452e318f3b608cc31dad0940ca.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/191f07799be0b62f4e7502163994ed42.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/0f8b019d2550929390b533c24e4f13e0.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/4f1a92b8d52b45d3e2091c631377c0ec.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/be94ed8ed90159cbab7cdda91122eee1.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/c5554b49e8ff2c934c446b1be31d6563.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/265e1975a15ef05e4b51bfed47538ebe.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/7445042b0851b238b52083ac889334bd.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/af91d7eb05e39c50a9cfcd27b50e3b25.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/e49a04425773ff3ffc81b08538d9bcc6.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/aebac0d80faea5158cad4d17a15167af.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/6a8ba5185fec8be95d8fb9b47337f707.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/9a875c1db243f009a4f7f9fa57a81f0f.nca/00
+rm /userdata/system/configs/Ryujinx/bis/system/Contents/registered/8bb427d2e0765d99b82a8258fc7b23e9.nca/00
+rm /userdata/system/configs/evmapy/gaelco.keys
+ rm system/configs/Ryujinx/bis/system/Contents/registered/0216bd3304abdc931246551f9bfa2020.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/04ff3f1a18313b4ef2b793e2377e69ec.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/0521bd5795e9943a960ddfdf2cc743fc.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/0570a5bd69f7c787275f994652e83d56.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/069f6aefa8a1abe64eaad52392b7b582.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/0d2ad5d9c789c6a7d707225b177d8642.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/17fa728e083bb57d8eea4c82091ad435.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/193d1ca41d7712cf678a871211358a08.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/19f488462f971e7c76ed8a9c696131c5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/1d905bd21b97a03a733fc32068b2262f.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/22f33f2dee039a9d08b1c506dd2bdfeb.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/24f486dce1983b74e558ac4a21954db5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/292834a35395a1021a086630dedb877e.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/2d7b288e349cfed2bde29b414b43b244.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/2daa9e51b4a180a62c4f3e0131423205.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/30664667640369d4fec1e9691fea9ea1.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/3245e890d79b29c99c54042da991673b.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/32913b3348f2ef01e6e3f4b83249690e.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/32d94610da223641af23e7f22a327966.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/345eb30c36623de4ab03b2bc4a82811c.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/3627bc5a30e4d87cafaf6c30a9911a8f.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/3684576b203be5708ccaffeacb357426.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/388706be9609db59799d6b2fcbbffa55.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/3d84bba724d1825b279fffc3cbda333b.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/414b06ee0b1f6441ab63d89f87a9c1c8.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/4759b475a573b798245ee73170d860aa.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/4bdb48c0e7a62d00e6d05c3bf8f7b97c.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/5118478f493f79e11ede877402b7a180.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/5194bb10f874ca85cf390827401169d1.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/522e04f707d4a4ffa83c5c851e9551ba.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/52799db573e00a552a90766af326c530.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/54c4cea75c198d561d096d61ce9e02f5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/553a403ed8c118f36e1bf1c1d64bb848.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/565c3d36af625a701c2e2377bd19ab3c.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/566d1ccf5c56efcd3cae70b8480f4fe0.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/5716203813e53a55397975f0681c6462.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/578508fcc9aa5de11bfe7b45ec42be54.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/582a86b849e287f6c0edf1db1d182cfa.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/58c1beb755c12bdd4ee3c831e25af422.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/598e9818d81553de63493da441d277b8.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/5a204d6ff91b75ea2cb352b6055320e5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/5b991be1efff3e2d2bc34fba9d200c58.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/5c6107c1c243e71d2e897b5e61391672.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/5e2c57899f25f00aa2074abaf3e7f20f.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/5fc72ae172a91d287d4c6b0432602718.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/61562912fb360478fef8d9ac7bc6987f.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/639298b553522656451a2409bad87135.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/6510aed33084ba2e4b2161963768b2d6.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/67006f6cd184f6fac9c3e204dea7e0e5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/670e2a6dae165330a6b36eaa420ccb19.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/6768620093244c20ab7ac157306b2711.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/692942f5c2715519e567c17346146897.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/6a80c3622ba0485f48c8cd3205e2b32b.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/6b80ecb87a0005a98c1f6d0188cb734c.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/6c73e63ae7724e3e4a8cffa0d7f4f728.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/6e99a1ab3036f98b40f9f2ab5afb4813.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/70d1c71fac45d32cc3f8b17227d3fee0.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/7434a7c2436be366504ea09e2cfb3193.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/74792a042777e15e8841cacebc2588c3.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/74adcd291d34c5b8882e5c35e43078c6.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/761af82bda1bee45aff00c96bc26d84e.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/765c5895d833f846c3cbfd03f3b0b78a.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/778e12228c2a877efba5390f81feed7d.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/79e18e7cbd5de5b700f054bb95e95efd.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/7a99583e336be697af80b0c5f7baf994.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/7b1d7f3b3590b38021309ad2a336615d.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/7bf5a95c132614a5936d96b12bb72ee5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/7ddeb7f9b5f6f3f4ccf1e83b51970cb6.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/83d0aba25904aa660d5b2851f8d45c43.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/85de6e5cefc825c243f096c20e95b7ac.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/85f4f568a6c62fb69541ff24ec2a2649.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/86cb79c698abb26caa157a9f03296447.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8726ed28ffdc6eb302a60b8589139f33.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8959a3a5f7d4b79c7320e9af6e0d32a3.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8a6455f25c813e95ebb9858833dfb23f.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8c16e0de79adc73684713afafc361b13.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8c9c72a76371b0658e6b89b8db1fd987.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8db4fef45040c5de5d9bca64ad8dd6f7.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8dd1cadc9a0777b9eb0af59b90bb80f5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8e322c52c445f0ca326cc3d7f9408bfd.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8e910e497b9caf91f992bc6c3ae91e44.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/8eaf3d2ed45844d04d17031243c89d68.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/900ff398896025d8dd77a137beb44be9.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/92e5a5bf6113cfebd3e92dc9518226ca.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/93ba489d31e8f1c4b1781dd1e8d61bbc.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/95ee54640bf51a37136cde93dc0f4c19.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/96369891a6dbc17bee76a2842de48576.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/97985cd5b5456daa6aa8a15e8bec4cd8.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/9b1ad154ceb1b3db7ca2a33324203761.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/9bc3dcc9461fccd5caab42c487114eb7.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/9c90ea66f47a7b4dbfc1868326e26dd2.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/9d27e65d6997f51314ba9e7328cd5605.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/9da759303ac67b7cabed8168912e263a.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/9f68f582238182effec7c4abf0a306af.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/a0111da565e8fe8c982eb93418553aa5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/a03f08989aed6f01b6746a959495f433.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/a042179f2dc68775db827f368afd8d5c.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/a05c2dba9dae8c43c0da7f6344b6ea19.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/a2253757567708d1712dc01310ec43f3.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/a32ae336b2a60aeb69192f721bfa024d.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/a56c281e4b8fc6b2d8c8affad2fbac95.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/a78023f62e10d8d7adb3b6e38c97d2f5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/a86fa01027971fa059edee3c6483a3da.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ab1f4cecb6d6b3bb0c5f8fa5445cdead.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ad6f019018c93a5b602839197628738f.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/b05e6fc997ab48684df9b16d974c309b.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/b3893461f70e726edabe39cb21bd8cc7.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/b5439662d8b92a3dd3210adf65179329.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/b5c62676f3a755395d19e10c00b701e9.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/b60e4470b2a0864450a484ae10b64e6f.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/b6c6ea3ae39c4d58db4d830512fde365.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/b937dedc8e76e65a7d46dbd68070c5a9.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/b979707157cc922ac6e36638e72191d5.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ba15e923322fa5f7242e906d6e91b86b.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ba88bd048814486630e751a11734ff44.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/bd3d5f6715501a7fcbaa15a8ae882139.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/bd3e6c790bc712fea068de146aad8832.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/bd7412a37b042826fa79ba6258066df4.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/c0ad3f913d190a1051f83b6333b445fc.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/c21e22caafa2feec1c25787994762ca0.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/c27b4e742487a037be3ae7d3bcad84ef.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/c35e6f9898e1f43aa2c0cb9962e01b73.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/cbe7aefd548cffd65e1847c7d6ae1b25.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/cc377560b095202d46649524c04d5e87.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ce8f8337c2359292fff0145832d06b9e.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/cfeec0b45664bfecf91be7de2200addb.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/d01073ddb4d7bab747b4be2c2a26eacf.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/d13f3234eb3b55e0d65a8467e0b8928a.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/d2fd0c1b8d427def553764f81311860c.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/d692298ad6188a50730a88446421a36c.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/d71d37407f7edef298e67e53a79fdf04.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/d86ce94df60a9188b38319899c0edd9a.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/d8e6bdc2dfc5e4306084e3700e95f546.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/d9b3b6a0cda3df74d8a91c3958ff387c.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/da74fede46b903b508701bdf50b43509.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/db4af5537fc5de75399bd6f7b5c899b2.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/dc84ad71c7058e463c2b3c760ceefe92.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/de8445d010adb1ca6b078cfae33112c0.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/e0f1b164ca581f6149030da36e9cadd6.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/e270b3b35fb2ed964d50dfd35c580014.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/e3d2708ea1af9958a953d7a143e19c7b.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/e562858d0ddd932f0330a3907697934f.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/e9b068dc6d4e3e374f64ad32768d4196.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ea04802f4384f389f0c115e6080a00fa.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ea33a8264f0a70992b5b433b9772f672.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/eaaf2b7e36169eb0187ea898d7d225f8.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ebcc9c853d9f7828a0dec2b90b9ac9cc.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ec70a8cb1296a362a82f7f15a466d3a4.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/f41e4567e5bd94a6056c6982aeece99a.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/f45daad572449aad310bf8ea3631468c.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/f46c6b2e897bdd6605dd4d841e1ff4a4.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/f4bd84f83c4ad0c005d4d980e099ab36.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/f5efb100172e2d3b5995269b4b18b1f3.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/f6c1e9a9f8dc419dc39f6390d4656671.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/f83fae9b1fd522dcf139c63f99091396.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/f846a1c2d0b4e14d1179499f462f4eb1.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/f88569234f4dca373f9d66fffece86f9.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/fcf3579546cb440505e1fd71d4637cd1.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/fd8aa2480e4bf2f766f76289c544d53a.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/fddb1aa3973fad4723feb0c7809ac990.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/fdf9b468741068b30b16834c4d96e02b.nca/00
+ rm system/configs/Ryujinx/bis/system/Contents/registered/ffbe410898f399334c3cabaaaa609e0e.nca/00
+ rm system/configs/emulationstation/es_systems_beena.cfg
+ rm system/configs/emulationstation/es_systems_bk001001.cfg
+ rm system/configs/emulationstation/es_systems_casloopy.cfg
+ rm system/configs/emulationstation/es_systems_cgenie.cfg
+ rm system/configs/emulationstation/es_systems_dragon32.cfg
+ rm system/configs/emulationstation/es_systems_ep128.cfg
+ rm system/configs/emulationstation/es_systems_gamewave.cfg.test
+ rm system/configs/emulationstation/es_systems_mz2500.cfg
+ rm system/configs/emulationstation/es_systems_oric1.cfg
+ rm system/configs/emulationstation/es_systems_pv2000.cfg
+ rm system/configs/emulationstation/es_systems_rx78.cfg
+ rm system/configs/emulationstation/es_systems_sc-3000.cfg
+ rm system/configs/emulationstation/es_systems_segaai.cfg
+ rm system/configs/emulationstation/es_systems_snescd.cfg
+ rm system/configs/emulationstation/es_systems_sv8000.cfg
+ rm system/rgs/emulators/demul/demul_d3d11.log
+ rm system/rgs/emulators/demul/scache/0_HIKARUV00.vsh
+ rm system/rgs/emulators/demul/scache/0_PMX00.psh
+ rm system/rgs/emulators/demul/scache/0_PMX00.vsh
+ rm system/rgs/emulators/demul/scache/101650_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/101778_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/1040_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/1042_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/105490_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/105618_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/105746_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/105874_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/113680_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/113682_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/113808_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/113810_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/113936_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/113938_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/113942_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/114064_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/114066_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/1168_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/1170_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/1296_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/1298_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/137438953472_PMX00.psh
+ rm system/rgs/emulators/demul/scache/1424_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/1426_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/146_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/15376_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/15378_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/15504_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/15506_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/15632_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/15634_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/15760_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/15762_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/164880_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/165136_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/165138_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/165266_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/179472_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/179474_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/179602_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/1_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/1_HIKARUV00.vsh
+ rm system/rgs/emulators/demul/scache/1_PMX00.vsh
+ rm system/rgs/emulators/demul/scache/232850_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/236818_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/236946_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/245010_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/245138_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/263314_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/263442_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/2_PMX00.vsh
+ rm system/rgs/emulators/demul/scache/328720_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/328978_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/329106_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/33176_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/334866_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/334994_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/335122_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/343058_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/343186_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/343314_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/343442_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/35201551958016_PMX00.psh
+ rm system/rgs/emulators/demul/scache/361874_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/376080_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/376082_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/39954_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/40210_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/40338_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/4209_PMX00.psh
+ rm system/rgs/emulators/demul/scache/429458_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/433554_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/441618_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/441746_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/48146_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/48272_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/48274_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/48402_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/48528_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/48530_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/492562_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/492690_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/499090_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/506898_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/507026_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/507282_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/65554_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/66704_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/66832_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/66834_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/66960_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/66962_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/68882_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/69010_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/70259253_PMX00.psh
+ rm system/rgs/emulators/demul/scache/7186_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/72722_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/72976_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/72978_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/73104_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/73106_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/7312_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/7314_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/7440_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/7442_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/7568_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/7570_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/80912_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/80914_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/81040_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/81042_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/81168_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/81170_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/81298_HIKARUV00.psh
+ rm system/rgs/emulators/demul/scache/99730_HIKARUV00.psh
+ rm system/rgs/fix/Supermodel.ini.template
+ delete mode 100755 system/rgs/fix/namco2x6/Play
+ rm system/rgs/fix/namco2x6/arcadedefs/acedriv3.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaievo.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaievo2.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaievo3.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaievo4.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaievo5.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaievo6.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaievo7.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaievo8.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaiser.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaiser2.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaiser3.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaiser4.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaiser5.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/akaiser6.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/batlgr3.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/batlgr37.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/batlgr38.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/batlgr3t.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/bldyr3b.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/cobrata.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/fateulc.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/fghtjam.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/gdvsgd.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/gdvsgdnx.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/gsd.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/gundzaft.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/idolm.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/idolmtower.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/kinniku.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/kinniku2.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/minnadk.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/motogp.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/netchu02.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/pacmanap.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/pacmanbr.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/prdgp03.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/qgundam.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/rrvac.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/sbxc.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/scptour.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/soulclb2.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/soulclb3.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/sukuinuf.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/superdbz.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/taiko10.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/taiko11.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/taiko12.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/taiko13.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/taiko14.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/taiko7.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/taiko8.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/taiko9.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/tekken4.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/tekken4a.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/tekken4b.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/tekken4c.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/tekken51.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/tekken5d.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/timecrs3.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/timecrs3e.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/timecrs3u.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/timecrs4.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/umilucky.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/vnight.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/wanganmd.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/wanganmr.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/yuyuhaku.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/zgundm.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/zgundmdx.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/zoidiexp.arcadedef
+ rm system/rgs/fix/namco2x6/arcadedefs/zoidsinf.arcadedef
+ delete mode 100755 system/rgs/fix/supermodel
+ rm system/rgs/fix/supermodelGenerator.py
+ rm system/rgs/fix/xeniaGenerator.py
+ delete mode 100755 system/wine/dxvk/x32/d3d10core.dll
+ delete mode 100755 system/wine/dxvk/x32/d3d11.dll
+ delete mode 100755 system/wine/dxvk/x32/d3d12.dll
+ delete mode 100755 system/wine/dxvk/x32/d3d12core.dll
+ delete mode 100755 system/wine/dxvk/x32/d3d8.dll
+ delete mode 100755 system/wine/dxvk/x32/d3d9.dll
+ delete mode 100755 system/wine/dxvk/x32/dxgi.dll
+ delete mode 100755 system/wine/dxvk/x32/nvapi.dll
+ delete mode 100755 system/wine/dxvk/x64/d3d10core.dll
+ delete mode 100755 system/wine/dxvk/x64/d3d11.dll
+ delete mode 100755 system/wine/dxvk/x64/d3d12.dll
+ delete mode 100755 system/wine/dxvk/x64/d3d12core.dll
+ delete mode 100755 system/wine/dxvk/x64/d3d8.dll
+ delete mode 100755 system/wine/dxvk/x64/d3d9.dll
+ delete mode 100755 system/wine/dxvk/x64/dxgi.dll
+ delete mode 100755 system/wine/dxvk/x64/nvapi64.dll
+ delete mode 100755 system/wine/dxvk/x64/nvofapi64.dll
 fi
 
 tar -xvzf $ARCHIVEPATH --overwrite --directory /userdata/
