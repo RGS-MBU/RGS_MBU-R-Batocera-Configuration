@@ -54,9 +54,12 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  rm /userdata/system/configs/emulationstation/es_systems_segaai.cfg
  rm /userdata/system/configs/emulationstation/es_systems_snescd.cfg
  rm /userdata/system/configs/emulationstation/es_systems_sv8000.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_hikaru.cfg
  rm /userdata/system/configs/evmapy/bk0010.keys
  rm /userdata/system/configs/evmapy/cgenie.keys
  rm /userdata/system/configs/evmapy/dragon32.keys
+ rm /userdata/system/configs/evmapy/gaelco.demul.keys
+ rm /userdata/system/configs/evmapy/hikaru.keys
  rm /userdata/system/configs/evmapy/mz2500.keys
  rm /userdata/system/configs/evmapy/oric1.keys
  rm /userdata/system/configs/evmapy/pv2000.keys
