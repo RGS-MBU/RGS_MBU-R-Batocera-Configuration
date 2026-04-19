@@ -55,6 +55,8 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  rm /userdata/system/configs/emulationstation/es_systems_snescd.cfg
  rm /userdata/system/configs/emulationstation/es_systems_sv8000.cfg
  rm /userdata/system/configs/emulationstation/es_systems_hikaru.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_tvc64.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_vic1001.cfg
  rm /userdata/system/configs/evmapy/bk0010.keys
  rm /userdata/system/configs/evmapy/cgenie.keys
  rm /userdata/system/configs/evmapy/dragon32.keys
@@ -89,12 +91,16 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  [ -d /userdata/roms/astrocde ] && [ ! -e /userdata/roms/astrocade ] && mv /userdata/roms/astrocde /userdata/roms/astrocade
  [ -d /userdata/roms/iortcw ] && [ ! -e /userdata/roms/rtcw ] && mv /userdata/roms/iortcw /userdata/roms/rtcw
  [ -d /userdata/roms/casloopy ] && [ ! -e /userdata/roms/loopy ] && mv /userdata/roms/casloopy /userdata/roms/loopy
+ [ -d /userdata/roms/tvc64 ] && [ ! -e /userdata/roms/tvc64 ] && mv /userdata/roms/tvc64 /userdata/roms/tvc
+ [ -d /userdata/roms/ep128 ] && [ ! -e /userdata/roms/ep128 ] && mv /userdata/roms/ep128 /userdata/roms/enterprise
 
 else
     echo 'Deleting old files'
 
 
  rm /userdata/system/configs/emulationstation/es_systems_hikaru.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_tvc64.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_vic1001.cfg
  rm /userdata/system/configs/evmapy/bk0010.keys
  rm /userdata/system/configs/evmapy/cgenie.keys
  rm /userdata/system/configs/evmapy/dragon32.keys
