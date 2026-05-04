@@ -28,6 +28,62 @@ echo "Update settings"
 sed -i 's/ckau-book-rgs-v2/ckau-book-PixN/' /userdata/system/configs/emulationstation/es_settings.cfg
 sed -i 's/name="SaveGamelistsOnExit" value="false"/name="SaveGamelistsOnExit" value="true"/' /userdata/system/configs/emulationstation/es_settings.cfg
 
+if ! grep -q "jaguarcd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"jaguarcd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "snes-msu1.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"snes-msu1.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "konamilcd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"konamilcd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "snesh.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"snesh.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "nesaladdin.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"nesaladdin.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "tiger.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"tiger.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "sufami.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"sufami.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "xegs.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"xegs.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "satellaview.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"satellaview.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "atari800.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"atari800.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "actionmax.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"actionmax.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "sgb.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"sgb.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "gameandwatch.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"gameandwatch.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "elektronika.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"elektronika.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
 if ! grep -q "datach.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
     sed -i '$i'"$(echo "\\\t<bool name=\"datach.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
 fi
@@ -46,6 +102,10 @@ fi
 
 if ! grep -q "segacd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
     sed -i '$i'"$(echo "\\\t<bool name=\"segacd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "megacd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"megacd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
 fi
 
 if ! grep -q "megacd32x.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
