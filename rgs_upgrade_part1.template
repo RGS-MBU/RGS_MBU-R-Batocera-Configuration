@@ -57,6 +57,9 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  rm /userdata/system/configs/emulationstation/es_systems_hikaru.cfg
  rm /userdata/system/configs/emulationstation/es_systems_tvc64.cfg
  rm /userdata/system/configs/emulationstation/es_systems_vic1001.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_chihiro.cfg
+
+
  rm /userdata/system/configs/evmapy/bk0010.keys
  rm /userdata/system/configs/evmapy/cgenie.keys
  rm /userdata/system/configs/evmapy/dragon32.keys
@@ -77,6 +80,8 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  rm /userdata/system/rgs/fix/supermodel
  rm /userdata/system/rgs/fix/supermodelGenerator.py
  rm /userdata/system/rgs/fix/xeniaGenerator.py
+ rm /userdata/system/rgs/fix/messSystems.csv
+
  rm -rf /userdata/system/wine/dxvk
  rm -rf /userdata/system/wine-bottles/*
 
