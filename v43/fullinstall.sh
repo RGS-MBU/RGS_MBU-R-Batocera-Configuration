@@ -126,7 +126,7 @@ echo ""
 echo "downloaded archive verification..."
 
 
-EXPECTED_CHECKSUM="f5a81fda8d8e29879fa0858007500f72"
+EXPECTED_CHECKSUM="5dc222cf4fa85a9b6fe61c4bdecb2790"
 ACTUAL_CHECKSUM=$(md5sum "$ARCHIVEPATH" | awk '{print $1}')
 ACTUAL_SIZE=$(stat -c%s "$ARCHIVEPATH")
 
