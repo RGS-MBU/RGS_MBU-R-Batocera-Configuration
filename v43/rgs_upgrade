@@ -122,7 +122,7 @@ else
 
 fi
 
-tar -xvzf $ARCHIVEPATH --overwrite --directory /userdata/
+tar -xvzf $ARCHIVEPATH --keep-directory-symlink --overwrite --directory /userdata/
 rm $ARCHIVEPATH
 
 #read new conf after 'RGS TUNING' , for games tuning

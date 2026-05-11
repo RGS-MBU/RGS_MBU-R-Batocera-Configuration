@@ -191,7 +191,7 @@ else
     rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered/*
 fi
 
-tar -xvzf $ARCHIVEPATH --overwrite --directory /userdata/
+tar -xvzf $ARCHIVEPATH --keep-directory-symlink --overwrite --directory /userdata/
 rm $ARCHIVEPATH
 
 #workaround lock for v41, to remove in v42
