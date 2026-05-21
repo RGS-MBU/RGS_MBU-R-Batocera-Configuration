@@ -1,0 +1,278 @@
+#!/bin/bash
+
+if [ -f "/userdata/system/rgs.version" ]; then
+    CURRENTRGSVERSION=$(cat /userdata/system/rgs.version)
+else
+    CURRENTRGSVERSION="0"
+fi
+
+if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
+    echo "version: 42"
+    ARCHIVE="v42tov43update.tar.gz"
+elif [[ "$CURRENTRGSVERSION" =~ ^43 ]]; then
+    echo "version: 43"
+    ARCHIVE="update.tar.gz"
+else
+   echo "wrong version"
+   exit 1
+fi
+
+ARCHIVEPATH="/userdata/extractions/$ARCHIVE"
+
+#read user configuration before "RGS TUNING", for user system changes
+BEGINCONF=$(sed -e '/RGS TUNING/,$d' /userdata/system/batocera.conf)
+
+#read end user conf after "END RGS".  (or jupace.emulator for v39 initial release)
+if grep -q "END RGS" /userdata/system/batocera.conf; then
+    ENDCONF=$(sed -e '0,/END RGS/d' /userdata/system/batocera.conf)
+else
+    ENDCONF=$(sed -e '0,/jupace.emulator/d' /userdata/system/batocera.conf)
+fi
+
+
+#download pack
+echo "Downloading new files..."
+wget  -q --show-progress --progress=bar --no-check-certificate --no-cache --no-cookies -O $ARCHIVEPATH "http://rgsretro1986.ds78102.seedhost.eu/update/v43/$ARCHIVE"
+
+if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
+    echo 'Deleting old files from v42'
+
+ rm -rf /userdata/system/configs/Ryujinx/bis/system/Contents/registered
+ rm /userdata/system/configs/evmapy/gaelco.keys
+ rm /userdata/system/configs/emulationstation/es_systems_beena.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_bk001001.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_casloopy.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_cgenie.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_dragon32.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_ep128.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_gamewave.cfg.test
+ rm /userdata/system/configs/emulationstation/es_systems_mz2500.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_oric1.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_pv2000.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_rx78.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_sc-3000.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_segaai.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_snescd.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_sv8000.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_hikaru.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_tvc64.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_vic1001.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_chihiro.cfg
+
+
+ rm /userdata/system/configs/evmapy/bk0010.keys
+ rm /userdata/system/configs/evmapy/cgenie.keys
+ rm /userdata/system/configs/evmapy/dragon32.keys
+ rm /userdata/system/configs/evmapy/gaelco.demul.keys
+ rm /userdata/system/configs/evmapy/hikaru.keys
+ rm /userdata/system/configs/evmapy/mz2500.keys
+ rm /userdata/system/configs/evmapy/oric1.keys
+ rm /userdata/system/configs/evmapy/pv2000.keys
+ rm /userdata/system/configs/evmapy/rx78.keys
+ rm /userdata/system/configs/evmapy/sv8000.keys
+ rm /userdata/system/configs/evmapy/triforce.keys
+
+ rm /userdata/system/rgs/emulators/demul/demul_d3d11.log
+ rm -rf /userdata/system/rgs/emulators/demul/scache/*
+ rm /userdata/system/rgs/fix/namco2x6/Play
+ rm -rf /userdata/system/rgs/fix/namco2x6/arcadedefs
+ rm /userdata/system/rgs/fix/Supermodel.ini.template
+ rm /userdata/system/rgs/fix/supermodel
+ rm /userdata/system/rgs/fix/supermodelGenerator.py
+ rm /userdata/system/rgs/fix/xeniaGenerator.py
+ rm /userdata/system/rgs/fix/messSystems.csv
+
+ rm -rf /userdata/system/wine/dxvk
+ rm -rf /userdata/system/wine-bottles/*
+
+
+ [ -d /userdata/roms/bbc ] && [ ! -e /userdata/roms/bbcmicro ] && mv /userdata/roms/bbc /userdata/roms/bbcmicro
+ [ -d /userdata/roms/bk001001 ] && [ ! -e /userdata/roms/bk ] && mv /userdata/roms/bk001001 /userdata/roms/bk
+ [ -d /userdata/roms/dragon32 ] && [ ! -e /userdata/roms/dragon64 ] && mv /userdata/roms/dragon32 /userdata/roms/dragon64
+ [ -d /userdata/roms/o2em ] && [ ! -e /userdata/roms/odyssey2 ] && mv /userdata/roms/o2em /userdata/roms/odyssey2
+ [ -d /userdata/roms/msu-md ] && [ ! -e /userdata/roms/megadrive-msu ] && mv /userdata/roms/msu-md /userdata/roms/megadrive-msu
+ [ -d /userdata/roms/xash3d_fwgs ] && [ ! -e /userdata/roms/halflife ] && mv /userdata/roms/xash3d_fwgs /userdata/roms/halflife
+ [ -d /userdata/roms/plugnplay ] && [ ! -e /userdata/roms/tvgames ] && mv /userdata/roms/plugnplay /userdata/roms/tvgames
+ [ -d /userdata/roms/astrocde ] && [ ! -e /userdata/roms/astrocade ] && mv /userdata/roms/astrocde /userdata/roms/astrocade
+ [ -d /userdata/roms/iortcw ] && [ ! -e /userdata/roms/rtcw ] && mv /userdata/roms/iortcw /userdata/roms/rtcw
+ [ -d /userdata/roms/casloopy ] && [ ! -e /userdata/roms/loopy ] && mv /userdata/roms/casloopy /userdata/roms/loopy
+ [ -d /userdata/roms/tvc64 ] && [ ! -e /userdata/roms/tvc64 ] && mv /userdata/roms/tvc64 /userdata/roms/tvc
+ [ -d /userdata/roms/ep128 ] && [ ! -e /userdata/roms/ep128 ] && mv /userdata/roms/ep128 /userdata/roms/enterprise
+
+else
+    echo 'Deleting old files'
+
+ rm /userdata/system/configs/emulationstation/es_systems_hikaru.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_tvc64.cfg
+ rm /userdata/system/configs/emulationstation/es_systems_vic1001.cfg
+ rm system/configs/emulationstation/es_systems_chihiro.cfg
+ rm /userdata/system/configs/evmapy/bk0010.keys
+ rm /userdata/system/configs/evmapy/cgenie.keys
+ rm /userdata/system/configs/evmapy/dragon32.keys
+ rm /userdata/system/configs/evmapy/gaelco.demul.keys
+ rm /userdata/system/configs/evmapy/hikaru.keys
+ rm /userdata/system/configs/evmapy/mz2500.keys
+ rm /userdata/system/configs/evmapy/oric1.keys
+ rm /userdata/system/configs/evmapy/pv2000.keys
+ rm /userdata/system/configs/evmapy/rx78.keys
+ rm /userdata/system/configs/evmapy/sv8000.keys
+ rm /userdata/system/configs/evmapy/triforce.keys
+ rm -rf /userdata/system/wine/dxvk
+ rm /userdata/system/rgs/fix/messSystems.csv
+
+fi
+
+tar -xvzf $ARCHIVEPATH --keep-directory-symlink --overwrite --directory /userdata/
+rm $ARCHIVEPATH
+
+#read new conf after 'RGS TUNING' , for games tuning
+RGSTUNING=$(sed -n '/RGS TUNING/,/END RGS/p' /userdata/system/batocera.conf)
+
+
+echo "Update batocera.conf"
+
+echo "$BEGINCONF" > /userdata/system/batocera.conf.new
+
+#sed -i '/system.services/d' /userdata/system/batocera.conf.new
+sed -i '/windows.dxvk/d' /userdata/system/batocera.conf.new
+sed -i '/windows.fsync/d' /userdata/system/batocera.conf.new
+sed -i '/windows.esync/d' /userdata/system/batocera.conf.new
+
+echo "$RGSTUNING" >> /userdata/system/batocera.conf.new
+echo "$ENDCONF" >> /userdata/system/batocera.conf.new
+mv /userdata/system/batocera.conf.new /userdata/system/batocera.conf
+
+/usr/bin/batocera-services enable rgs_config
+/usr/bin/batocera-services enable rgs_download
+
+echo "Update settings"
+
+sed -i 's/ckau-book-rgs-v2/ckau-book-PixN/' /userdata/system/configs/emulationstation/es_settings.cfg
+sed -i 's/name="SaveGamelistsOnExit" value="false"/name="SaveGamelistsOnExit" value="true"/' /userdata/system/configs/emulationstation/es_settings.cfg
+
+if ! grep -q "jaguarcd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"jaguarcd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "snes-msu1.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"snes-msu1.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "konamilcd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"konamilcd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "snesh.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"snesh.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "nesaladdin.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"nesaladdin.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "tiger.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"tiger.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "sufami.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"sufami.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "xegs.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"xegs.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "satellaview.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"satellaview.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "atari800.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"atari800.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "actionmax.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"actionmax.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "sgb.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"sgb.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "gameandwatch.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"gameandwatch.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "elektronika.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"elektronika.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "datach.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"datach.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "sega32xcd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"sega32xcd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "sega32x.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"sega32x.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "megacd-jp.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"megacd-jp.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "segacd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"segacd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "megacd.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"megacd.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "megacd32x.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"megacd32x.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "genesis.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"genesis.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "genh.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"genh.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "clonehero.FolderViewMode" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"clonehero.FolderViewMode\" value=\"never\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "2players,4players" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '/CollectionSystemsAuto/c\\\\t<string name="CollectionSystemsAuto" value="favorites,lightgun,recent,wheel" />' /userdata/system/configs/emulationstation/es_settings.cfg
+    sed -i '/CollectionSystemsCustom/c\\\\t<string name="CollectionSystemsCustom" value="3players,4players,arcade-classics,arcade-killer,beatemup,fighting,platform,puzzle,run-and-gun,shumps-horizontal,shumps-vertical,sports" />' /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "gamecube-jp.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"gamecube-jp.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "gamecubeh.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"gamecubeh.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "clonehero.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"clonehero.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if ! grep -q "win98.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"win98.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
+if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
+    echo 'RGS Upgrade from v42 to v43 finished. The system will reboot.'
+    sleep 5
+    reboot
+else
+    echo 'Upgrade finished. Emulationstation will be reloaded.'
+    sleep 5
+    killall -9 emulationstation
+fi
