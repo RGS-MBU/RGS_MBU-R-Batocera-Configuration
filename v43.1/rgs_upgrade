@@ -267,6 +267,10 @@ if ! grep -q "win98.ungroup" /userdata/system/configs/emulationstation/es_settin
     sed -i '$i'"$(echo "\\\t<bool name=\"win98.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
 fi
 
+if ! grep -q "megadrive-jp.ungroup" /userdata/system/configs/emulationstation/es_settings.cfg; then
+    sed -i '$i'"$(echo "\\\t<bool name=\"megadrive-jp.ungroup\" value=\"true\" />")" /userdata/system/configs/emulationstation/es_settings.cfg
+fi
+
 if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
     echo 'RGS Upgrade from v42 to v43 finished. The system will reboot.'
     sleep 5
