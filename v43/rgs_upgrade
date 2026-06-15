@@ -84,7 +84,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
 
  rm -rf /userdata/system/wine/dxvk
  rm -rf /userdata/system/wine-bottles/*
-
+ rm /userdata/system/scripts/border.sh
 
  [ -d /userdata/roms/bbc ] && [ ! -e /userdata/roms/bbcmicro ] && mv /userdata/roms/bbc /userdata/roms/bbcmicro
  [ -d /userdata/roms/bk001001 ] && [ ! -e /userdata/roms/bk ] && mv /userdata/roms/bk001001 /userdata/roms/bk
