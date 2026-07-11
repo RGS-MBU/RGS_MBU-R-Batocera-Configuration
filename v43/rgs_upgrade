@@ -81,6 +81,7 @@ if [[ "$CURRENTRGSVERSION" =~ ^42 ]]; then
  rm /userdata/system/rgs/fix/supermodelGenerator.py
  rm /userdata/system/rgs/fix/xeniaGenerator.py
  rm /userdata/system/rgs/fix/messSystems.csv
+ rm /userdata/system/rgs/fix/es_systems.cfg
 
  rm -rf /userdata/system/wine/dxvk
  rm -rf /userdata/system/wine-bottles/*
