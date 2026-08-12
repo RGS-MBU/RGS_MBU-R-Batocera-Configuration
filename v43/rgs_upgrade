@@ -120,6 +120,7 @@ else
  rm /userdata/system/configs/evmapy/triforce.keys
  rm -rf /userdata/system/wine/dxvk
  rm /userdata/system/rgs/fix/messSystems.csv
+ rm -rf /userdata/system/rgs/generators/shadps4
 
 fi
 
