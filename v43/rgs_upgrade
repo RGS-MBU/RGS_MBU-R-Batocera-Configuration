@@ -121,7 +121,7 @@ else
  rm -rf /userdata/system/wine/dxvk
  rm /userdata/system/rgs/fix/messSystems.csv
  rm -rf /userdata/system/rgs/generators/shadps4
-
+ rm -rf /userdata/system/wine/custom/wine-10.20-staging-tkg-lightgun-amd64
 fi
 
 tar -xvzf $ARCHIVEPATH --keep-directory-symlink --overwrite --directory /userdata/
