@@ -123,6 +123,13 @@ else
  rm -rf /userdata/system/wine/custom/wine-10.20-staging-tkg-lightgun-amd64
  rm -rf /userdata/system/wine/custom/system/wine/custom/GE-Proton11-6-x86_64/
  rm -rf /userdata/system/wine/custom/system/wine/custom/GE-Proton11-7-x86_64/
+ rm -rf /userdata/system/wine/custom/system/wine/custom/GE-Proton11-10-x86_64/
+ rm /usedata/system/rgs/emulators/windows-arcade-loader/wine-prefix/apm3-test.tar.gz b/system/rgs/emulators/windows-arcade-loader/wine-prefix/apm3-test.tar.gz
+ rm /usedata/system/rgs/emulators/windows-arcade-loader/wine-prefix/apm3-test.tar.gz b/system/rgs/emulators/windows-arcade-loader/wine-prefix/apm3-test.version
+ rm /userdata/system/rgs/emulators/windows-arcade-loader/wine-prefix/hog-wild.tar.gz b/system/rgs/emulators/windows-arcade-loader/wine-prefix/hog-wild.tar.gz
+ rm /userdata/system/rgs/emulators/windows-arcade-loader/wine-prefix/hog-wild.tar.gz b/system/rgs/emulators/windows-arcade-loader/wine-prefix/hog-wild.version
+ rm /userdata//system/rgs/emulators/windows-arcade-loader/wine-prefix/wasteland.tar.gz b/system/rgs/emulators/windows-arcade-loader/wine-prefix/wasteland.tar.gz
+ rm /userdata//system/rgs/emulators/windows-arcade-loader/wine-prefix/wasteland.tar.gz b/system/rgs/emulators/windows-arcade-loader/wine-prefix/wasteland.version
  rm /userdata/system/rgs/fix/es_systems.cfg
 
 fi
